@@ -1,0 +1,83 @@
+{% extends 'backend/backend_base.html' %}
+{% load static %}
+
+{% block contents %}
+    <div class="bland">
+        <a href="">文章管理 </a>/ 修改文章
+    </div>
+
+    <form action="" method='post'>
+        <div class="form-group col-md-12">
+            <label for="artcle_title" class=''>标题</label>
+            <input type="text" name="" class='form-control' id='artcle_title' placeholder="请输入文章标题">
+        </div>
+
+        <div class="form-group col-md-12">
+            <label for="artcle_simple" class=''>简介</label>
+            <textarea class='form-control' id='artcle_simple' rows="4" placeholder="请输入文章简介"></textarea>
+        </div>
+
+        <div class="form-group col-md-12">
+            <label for="artcle_detail" class=''>内容</label>
+            <textarea class='form-control' id='artcle_detail' rows="15" placeholder="请输入文章内容"></textarea>
+        </div>
+
+
+        <div class="form-group col-md-12">
+            <label for="">类型</label>
+            <div class="col-md-12">
+                <input type="radio" value="" name="type" checked="checked" id="type_1"><label
+                    for="type_1">&nbsp;&nbsp;新闻</label>
+            </div>
+            <div class="col-md-12">
+                <input type="radio" value="" name="type">&nbsp;&nbsp;Python
+            </div>
+            <div class="col-md-12">
+                <input type="radio" value="" name="type">&nbsp;&nbsp;Linux
+            </div>
+            <div class="col-md-12">
+                <input type="radio" value="" name="type">&nbsp;&nbsp;OpenStack
+            </div>
+            <div class="col-md-12">
+                <input type="radio" value="" name="type">&nbsp;&nbsp;GoLang
+            </div>
+        </div>
+
+        <div class="form-group col-md-12">
+            <label for="">分类</label>
+            <div class="col-md-12">
+                <input type="radio" value="" name="category" checked="checked">&nbsp;&nbsp;无
+            </div>
+            <div class="col-md-12">
+                <input type="radio" value="" name="category" id="category_1">&nbsp;&nbsp;<label
+                    for="category_1">.NET</label>
+            </div>
+            <div class="col-md-12">
+                <input type="radio" value="" name="category">&nbsp;&nbsp;领域驱动
+            </div>
+            <div class="col-md-12">
+                <input type="radio" value="" name="category">&nbsp;&nbsp;Python
+            </div>
+            <div class="col-md-12">
+                <input type="radio" value="" name="category">&nbsp;&nbsp;设计模式
+            </div>
+            <div class="col-md-12">
+                <input type="radio" value="" name="category">&nbsp;&nbsp;LetCode
+            </div>
+        </div>
+
+        <div class="form-group col-md-12">
+            <label for="">标签</label>
+            <div class="col-md-12">
+                <input type="checkbox" value="" name="">&nbsp;&nbsp;Python之路
+            </div>
+            <div class="col-md-12">
+                <input type="checkbox" value="" name="">&nbsp;&nbsp;HTML
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <button type="submit" class='btn btn-primary article-add-btn '>提交</button>
+        </div>
+    </form>
+{% endblock contents %}

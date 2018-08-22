@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+    {{ block.super }}
+{% endblock css %}
+
+{% block body %}
+    <!-- Content -->
+    <h1>站点管理</h1>
+    <div class="row">
+        <div id="content" class=" col-md-9 app-list">
+            {% for app,cls_list in info.items %}
+                <div id="content-main">
+                    <div class="module">
+                        <table>
+                            <caption>
+                                <a href="/myAdmin/{{ app }}/" class="section">{{ app }}</a>
+                            </caption>
+                            {% for d in cls_list %}
+                                <tr>
+                                    <th scope="row"><a
+                                            href="/myAdmin/{{ app }}/{{ d.cls_real_name }}/">{{ d.cls_verbose_name }}</a>
+                                    </th>
+                                    <td><a href="/myAdmin/{{ app }}/{{ d.cls_real_name }}/add/" class="addlink">增加</a>
+                                    </td>
+                                    <td><a href="/myAdmin/{{ app }}/{{ d.cls_real_name }}/change/"
+                                           class="changelink">修改</a></td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div id="content-relate" class="col-md-3">
+            <div class="module" id="recent-actions-module">
+                <h2>最近动作</h2>
+                <h3>我的动作</h3>
+
+
+                <ul class="actionlist">
+                    <li class="addlink">
+                        <a href="/admin/responsitory/userinfo/14/change/">yi1</a>
+                        <br/>
+                        <span class="mini quiet">User info</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- END Content -->
+
+{% endblock body %}
+
+{% block js %}
+    {{ block.super }}
+{% endblock js %}

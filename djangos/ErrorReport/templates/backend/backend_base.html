@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+    <div class="backend-header">
+        <span class="logo pull-left">EasyStack</span>
+        <div class="header-left pull-left"><a href="">博客首页</a></div>
+        <div class="header-right pull-right">
+
+            <div class="item-menu">
+                <a href="" class="item">
+                    任务
+                    <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
+                    <span class="badge badge-task">4</span>
+                </a>
+            </div>
+
+
+            <div class="item-menu">
+                <a href="" class="item">
+                    通知
+                    <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                    &nbsp;<span class="badge badge-notice">2</span>
+                </a>
+            </div>
+
+
+            <div class="item-menu">
+                <a href="" class="item">
+                    消息
+                    <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                    &nbsp;<span class="badge badge-notice">2</span>
+                </a>
+            </div>
+
+
+            <a href="" class="head-img pull-right">
+                <img src="{% static 'img/timg.jpeg' %}" alt="用户头像">
+            </a>
+        </div>
+    </div>
+
+    <div class="backend-body">
+        <div class="body-left">
+            <div class="item-menu">
+                <a href="javascript:;" class="item">
+                    <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+                    文章管理
+                </a>
+                <div class="item-set">
+                    <a href="">菜单1</a>
+                    <a href="">菜单2</a>
+                    <a href="">菜单3</a>
+                </div>
+            </div>
+
+
+            <div class="item-menu">
+                <a href="javascript:;" class="item">
+                    <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+                    分类管理
+                </a>
+                <div class="item-set ">
+                    <a href="">菜单1</a>
+                    <a href="">菜单2</a>
+                    <a href="">菜单3</a>
+                </div>
+            </div>
+
+            <div class="item-menu">
+                <a href="javascript:;" class="item">
+                    <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+                    标签管理
+                </a>
+                <div class="item-set">
+                    <a href="">菜单1</a>
+                    <a href="">菜单2</a>
+                    <a href="">菜单3</a>
+                </div>
+            </div>
+
+            <div class="item-menu">
+                <a href="javascript:;" class="item">
+                    <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+                    个人管理
+                </a>
+                <div class="item-set">
+                    <a href="">菜单1</a>
+                    <a href="">菜单2</a>
+                    <a href="">菜单3</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="body-right">
+            {#            <div class="div" style="height: 3000px"></div>#}
+            {% block contents %}{% endblock contents %}
+
+        </div>
+    </div>
+
+    <div class="backend-footer"></div>
+{% endblock body %}
+
+{% block js %}
+    $(function(){
+    var $item = $('.backend-body .body-left  .item');
+    $item.click(function(){
+    $(this).parent().toggleClass('active-set');
+    $(this).parent().siblings().remove('active-set');
+    })
+    })
+    {% block bakcend_js %}{% endblock bakcend_js %}
+{% endblock js %}

@@ -1,0 +1,46 @@
+{% extends 'web/blog_base.html' %}
+{% load static %}
+{% load filter %}
+{% block blog_contens %}
+    <div>
+        {% for article in articles %}
+            <h3 class='artcle-title'><a href="/{{ blog.surfix }}/{{ article.id }}">{{ article.title }}</a></h3>
+            <p>{{ article.summary |default:''|slice:"200" }}</p>
+            <a href=''><span class="glyphicon glyphicon-user"
+                             aria-hidden="true"></span>&nbsp;&nbsp;{{ article.blog.user.username }}</a>
+            &nbsp;&nbsp;发布于 <span class='BlogDate'>{{ article.time|date:"Y/m/d" }}</span>&nbsp;&nbsp;&nbsp;
+            <a href=""> <span class="glyphicon glyphicon-comment"
+                              aria-hidden="true"></span> <span
+                    class='BlogCommentNum'>{{ article.commentinfo_set.count }}</span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href=""><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> <span
+                    class='BlogGoodsNum'>{{ article|like_count }}</span></a>
+        {% endfor %}
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12 text-center ">
+            {% if page.total_count > 1 %}
+                <ul class="pagination">
+                    {#                <li>#}
+                    {#                    <a href="#" aria-label="Previous">#}
+                    {#                        <span aria-hidden="true">«</span>#}
+                    {#                    </a>#}
+                    {#                </li>#}
+                    {#                <li><a href="#">1</a></li>#}
+                    {#                <li><a href="#">2</a></li>#}
+                    {#                <li><a href="#">3</a></li>#}
+                    {#                <li><a href="#">4</a></li>#}
+                    {#                <li><a href="#">5</a></li>#}
+                    {{ page_str }}
+                    {#                <li>#}
+                    {#                    <a href="#" aria-label="Next">#}
+                    {#                        <span aria-hidden="true">»</span>#}
+                    {#                    </a>#}
+                    {#                </li>#}
+                </ul>
+            {% endif %}
+        </div>
+    </div>
+    </div>
+{% endblock blog_contens %}

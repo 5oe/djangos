@@ -1,0 +1,105 @@
+{% extends 'backend/backend_base.html' %}
+{% load static %}
+
+{% block contents %}
+    <div class="bland">
+        <a href="">标签属性 </a>/ 标签列表
+    </div>
+
+    <div class="tag-add">
+        <div class="col-md-2"><label for="tag_add">标签名:</label></div>
+        <div class="col-md-5">
+            <input type="text" class='form-control' id='tag_add' placeholder="请输入新的标签名"/>
+        </div>
+
+        <div class="col-md-1">
+            <button type="submit" class="btn btn-default pull-right">增加</button>
+        </div>
+    </div>
+
+    <div class="col-md-12 tag-list">
+        <div class="panel panel-default">
+            <div class="panel-heading"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>&nbsp;标签列表
+            </div>
+            <div class="panel-body">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>标签</th>
+                        <th>文章个数</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+
+                        <td>妹子</td>
+                        <td>2</td>
+                        <td>
+                            <a type="button" class="btn btn-danger"><span class="glyphicon glyphicon-remove"
+                                                                          aria-hidden="true"></span>&nbsp;删除
+                            </a>
+                            |
+                            <a type="button" class="btn btn-primary"><span class="glyphicon glyphicon-file"
+                                                                           aria-hidden="true"></span>&nbsp;编辑
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td>Coding</td>
+                        <td>10</td>
+                        <td>
+                            <a type="button" class="btn btn-danger"><span class="glyphicon glyphicon-remove"
+                                                                          aria-hidden="true"></span>&nbsp;删除
+                            </a>
+                            |
+                            <a type="button" class="btn btn-primary"><span class="glyphicon glyphicon-file"
+                                                                           aria-hidden="true"></span>&nbsp;编辑
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td>旅行</td>
+                        <td>5</td>
+                        <td>
+                            <a type="button" class="btn btn-danger"><span class="glyphicon glyphicon-remove"
+                                                                          aria-hidden="true"></span>&nbsp;删除
+                            </a>
+                            |
+                            <a class="btn btn-primary"><span class="glyphicon glyphicon-file"
+                                                             aria-hidden="true"></span>&nbsp;编辑
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class=" pagetor pull-right ">
+        <div class="col-md-12">
+            <ul class="pagination">
+                <li>
+                    <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">«</span>
+                    </a>
+                </li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                    <a href="#" aria-label="Next">
+                        <span aria-hidden="true">»</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+{% endblock contents %}

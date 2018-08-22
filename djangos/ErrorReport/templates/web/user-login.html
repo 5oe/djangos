@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block body %}
+    {% load static %}
+    <div class="login-body container">
+        <form class="login-contents container" action="/login" method="post">
+            {% csrf_token %}
+            <h1 class="title">用户登录</h1>
+            <div class="form-group">
+                <label for="username">{{ form.username.label }}</label>
+                {{ form.username }}
+                <span class="username-error msg">{{ form.username.errors.0 }}</span>
+            </div>
+
+            <div class="form-group">
+                <label for="password">{{ form.password.label }}</label>
+                {{ form.password }}
+                <span class="password-error msg">{{ form.password.errors.0 }}</span>
+            </div>
+
+            <div class="form-group">
+                <div>
+                    <label for="verify ">{{ form.verify.label }}</label>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-md-8">
+                        {{ form.verify }}
+                        <span class="verify-error msg">{{ form.verify.errors.0 }}</span>
+                    </div>
+                    <div class="form-group col-md-4 ">
+                        <img src="/verify_code" alt="验证码" class="verify-code">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row login-choices">
+                <div class="col-md-6 pull-left">
+                    {{ form.auto }}
+                    <label for="auto">{{ form.auto.label }}</label>
+                </div>
+
+                <div class="col-md-4 pull-right">
+                    <a href="">忘记密码?</a>
+                </div>
+            </div>
+
+            <div class="form-group col-md-12 ">
+                <button type="submit" class="btn btn-default pull-left login-btn">登陆</button>
+            </div>
+        </form>
+    </div>
+    </div>
+{% endblock body %}
+
+
+{% block js %}
+{% endblock js %}

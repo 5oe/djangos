@@ -1,0 +1,34 @@
+{% extends 'backend/backend_base.html' %}
+{% load static %}
+
+{% block contents %}
+    <div class="bland" xmlns="http://www.w3.org/1999/html">
+        <a href="">报障管理 </a>/ 修改报障信息
+    </div>
+    {% if method == 'add' %}
+        <form action="/backend/trouble/{{ method }}" method='post'>
+    {% else %}
+        <form action="/backend/trouble/{{ trouble_id }}/{{ method }}" method='post'>
+    {% endif %}
+{% csrf_token %}
+<div class="form-group col-md-12">
+    <label for="artcle_title" class=''>{{ form.title.label }}</label>
+    {{ form.title }}
+    <label class="msg">{{ form.title.errors.0 }}</label>
+</div>
+
+
+<div class="form-group col-md-12">
+    <label for="artcle_detail" class=''>{{ form.detail.label }}</label>
+    {{ form.detail }}
+    <label class="msg">{{ form.detail.errors.0 }}</label>
+</div>
+
+
+<div class="col-md-2">
+    <input type="submit" class='btn btn-primary article-add-btn '>
+</div>
+</form>
+
+{% endblock contents %}
+

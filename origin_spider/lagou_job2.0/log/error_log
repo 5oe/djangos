@@ -1,0 +1,418 @@
+2018-07-26 17:34:38,931 - ERROR :  保存数据出错:list indices must be integers or slices, not str
+2018-07-26 17:34:39,535 - ERROR :  保存数据出错:list indices must be integers or slices, not str
+2018-07-26 17:34:40,050 - ERROR :  保存数据出错:list indices must be integers or slices, not str
+2018-07-26 17:37:51,404 - ERROR :  保存数据出错:list indices must be integers or slices, not str
+2018-07-26 17:37:51,918 - ERROR :  保存数据出错:list indices must be integers or slices, not str
+2018-07-26 17:37:52,529 - ERROR :  保存数据出错:list indices must be integers or slices, not str
+2018-07-26 17:38:42,173 - ERROR :  保存数据出错:list indices must be integers or slices, not str
+2018-07-26 17:38:42,881 - ERROR :  保存数据出错:list indices must be integers or slices, not str
+2018-07-26 17:38:43,408 - ERROR :  保存数据出错:list indices must be integers or slices, not str
+2018-07-26 17:39:27,261 - ERROR :  保存数据出错:list indices must be integers or slices, not str
+2018-07-26 17:39:27,871 - ERROR :  保存数据出错:list indices must be integers or slices, not str
+2018-07-26 17:39:29,265 - ERROR :  保存数据出错:list indices must be integers or slices, not str
+2018-07-26 17:39:43,159 - ERROR :  保存数据出错:list indices must be integers or slices, not str
+2018-07-26 17:39:43,752 - ERROR :  保存数据出错:list indices must be integers or slices, not str
+2018-07-26 17:39:44,284 - ERROR :  保存数据出错:list indices must be integers or slices, not str
+2018-07-26 17:40:13,450 - ERROR :  保存数据出错:list indices must be integers or slices, not str
+2018-07-26 17:40:13,888 - ERROR :  保存数据出错:list indices must be integers or slices, not str
+2018-07-26 17:40:14,455 - ERROR :  保存数据出错:list indices must be integers or slices, not str
+2018-07-26 17:41:31,036 - ERROR :  保存数据出错:list indices must be integers or slices, not str
+2018-07-26 17:41:31,525 - ERROR :  保存数据出错:list indices must be integers or slices, not str
+2018-07-26 17:41:32,075 - ERROR :  保存数据出错:list indices must be integers or slices, not str
+2018-07-26 17:43:11,504 - ERROR :  保存数据出错:list indices must be integers or slices, not str
+2018-07-26 17:43:12,155 - ERROR :  保存数据出错:list indices must be integers or slices, not str
+2018-07-26 17:43:13,355 - ERROR :  保存数据出错:list indices must be integers or slices, not str
+2018-07-26 17:43:47,530 - ERROR :  保存数据出错:list indices must be integers or slices, not str
+2018-07-26 17:43:48,887 - ERROR :  保存数据出错:list indices must be integers or slices, not str
+2018-07-26 17:43:49,545 - ERROR :  保存数据出错:list indices must be integers or slices, not str
+2018-07-26 18:36:14,094 - ERROR :  访问失败,重试次数5
+2018-07-26 18:36:14,672 - ERROR :  访问失败,重试次数4
+2018-07-26 18:36:15,389 - ERROR :  访问失败,重试次数3
+2018-07-26 18:36:15,456 - ERROR :  访问失败,重试次数2
+2018-07-26 18:36:15,519 - ERROR :  访问失败,重试次数1
+2018-07-26 18:36:15,594 - ERROR :  访问失败,重试次数0
+2018-07-26 18:36:15,594 - ERROR :  访问https://www.lagou.com/jobs/positionAjax.json测底失败
+2018-07-26 18:37:02,751 - ERROR :  访问失败,重试次数5
+2018-07-26 18:37:03,201 - ERROR :  访问失败,重试次数4
+2018-07-26 18:37:03,787 - ERROR :  访问失败,重试次数3
+2018-07-26 18:37:03,840 - ERROR :  访问失败,重试次数2
+2018-07-26 18:37:03,891 - ERROR :  访问失败,重试次数1
+2018-07-26 18:37:03,942 - ERROR :  访问失败,重试次数0
+2018-07-26 18:37:03,942 - ERROR :  访问https://www.lagou.com/jobs/positionAjax.json测底失败
+2018-07-26 18:37:12,709 - ERROR :  访问失败,重试次数5
+2018-07-26 18:37:13,290 - ERROR :  访问失败,重试次数4
+2018-07-26 18:37:13,887 - ERROR :  访问失败,重试次数3
+2018-07-26 18:37:13,981 - ERROR :  访问失败,重试次数2
+2018-07-26 18:37:14,076 - ERROR :  访问失败,重试次数1
+2018-07-26 18:37:14,170 - ERROR :  访问失败,重试次数0
+2018-07-26 18:37:14,170 - ERROR :  访问https://www.lagou.com/jobs/positionAjax.json测底失败
+2018-07-26 18:37:21,544 - ERROR :  访问失败,重试次数5
+2018-07-26 18:37:22,311 - ERROR :  访问失败,重试次数4
+2018-07-26 18:37:22,924 - ERROR :  访问失败,重试次数3
+2018-07-26 18:37:22,974 - ERROR :  访问失败,重试次数2
+2018-07-26 18:37:23,025 - ERROR :  访问失败,重试次数1
+2018-07-26 18:37:23,080 - ERROR :  访问失败,重试次数0
+2018-07-26 18:37:23,080 - ERROR :  访问https://www.lagou.com/jobs/positionAjax.json测底失败
+2018-07-26 18:37:52,299 - ERROR :  访问失败,重试次数5
+2018-07-26 18:37:52,904 - ERROR :  访问失败,重试次数4
+2018-07-26 18:37:53,433 - ERROR :  访问失败,重试次数3
+2018-07-26 18:37:53,485 - ERROR :  访问失败,重试次数2
+2018-07-26 18:37:53,538 - ERROR :  访问失败,重试次数1
+2018-07-26 18:37:53,587 - ERROR :  访问失败,重试次数0
+2018-07-26 18:37:53,588 - ERROR :  访问https://www.lagou.com/jobs/positionAjax.json测底失败
+2018-07-26 18:38:13,600 - ERROR :  访问失败,重试次数5
+2018-07-26 18:38:14,290 - ERROR :  访问失败,重试次数4
+2018-07-26 18:38:15,523 - ERROR :  访问失败,重试次数3
+2018-07-26 18:38:15,579 - ERROR :  访问失败,重试次数2
+2018-07-26 18:38:15,627 - ERROR :  访问失败,重试次数1
+2018-07-26 18:38:15,679 - ERROR :  访问失败,重试次数0
+2018-07-26 18:38:15,679 - ERROR :  访问https://www.lagou.com/jobs/positionAjax.json测底失败
+2018-07-26 18:38:38,908 - ERROR :  访问失败,重试次数5
+2018-07-26 18:38:39,822 - ERROR :  访问失败,重试次数4
+2018-07-26 18:38:40,551 - ERROR :  访问失败,重试次数3
+2018-07-26 18:38:40,600 - ERROR :  访问失败,重试次数2
+2018-07-26 18:38:40,653 - ERROR :  访问失败,重试次数1
+2018-07-26 18:38:40,703 - ERROR :  访问失败,重试次数0
+2018-07-26 18:38:40,703 - ERROR :  访问https://www.lagou.com/jobs/positionAjax.json测底失败
+2018-07-26 18:38:59,847 - ERROR :  访问失败,重试次数5
+2018-07-26 18:39:00,459 - ERROR :  访问失败,重试次数4
+2018-07-26 18:39:01,698 - ERROR :  访问失败,重试次数3
+2018-07-26 18:39:01,748 - ERROR :  访问失败,重试次数2
+2018-07-26 18:39:01,800 - ERROR :  访问失败,重试次数1
+2018-07-26 18:39:01,853 - ERROR :  访问失败,重试次数0
+2018-07-26 18:39:01,853 - ERROR :  访问https://www.lagou.com/jobs/positionAjax.json测底失败
+2018-07-26 18:39:46,707 - ERROR :  访问失败,重试次数5
+2018-07-26 18:39:47,216 - ERROR :  访问失败,重试次数4
+2018-07-26 18:39:47,832 - ERROR :  访问失败,重试次数3
+2018-07-26 18:39:47,881 - ERROR :  访问失败,重试次数2
+2018-07-26 18:39:47,936 - ERROR :  访问失败,重试次数1
+2018-07-26 18:39:47,987 - ERROR :  访问失败,重试次数0
+2018-07-26 18:39:47,988 - ERROR :  访问https://www.lagou.com/jobs/positionAjax.json测底失败
+2018-07-26 18:40:21,512 - ERROR :  访问失败,重试次数5
+2018-07-26 18:40:22,077 - ERROR :  访问失败,重试次数4
+2018-07-26 18:40:22,729 - ERROR :  访问失败,重试次数3
+2018-07-26 18:40:22,830 - ERROR :  访问失败,重试次数2
+2018-07-26 18:40:22,942 - ERROR :  访问失败,重试次数1
+2018-07-26 18:40:23,033 - ERROR :  访问失败,重试次数0
+2018-07-26 18:40:23,033 - ERROR :  访问https://www.lagou.com/jobs/positionAjax.json测底失败
+2018-07-26 18:42:43,332 - ERROR :  访问失败,重试次数5
+2018-07-26 18:42:43,950 - ERROR :  访问失败,重试次数4
+2018-07-26 18:42:44,656 - ERROR :  访问失败,重试次数3
+2018-07-26 18:42:44,711 - ERROR :  访问失败,重试次数2
+2018-07-26 18:42:44,761 - ERROR :  访问失败,重试次数1
+2018-07-26 18:42:44,814 - ERROR :  访问失败,重试次数0
+2018-07-26 18:42:44,814 - ERROR :  访问https://www.lagou.com/jobs/positionAjax.json测底失败
+2018-07-26 18:43:59,593 - ERROR :  访问失败,重试次数5
+2018-07-26 18:44:00,345 - ERROR :  访问失败,重试次数4
+2018-07-26 18:44:01,289 - ERROR :  访问失败,重试次数3
+2018-07-26 18:44:01,435 - ERROR :  访问失败,重试次数2
+2018-07-26 18:44:01,605 - ERROR :  访问失败,重试次数1
+2018-07-26 18:44:01,766 - ERROR :  访问失败,重试次数0
+2018-07-26 18:44:01,767 - ERROR :  访问https://www.lagou.com/jobs/positionAjax.json测底失败
+2018-07-26 18:44:42,609 - ERROR :  访问失败,重试次数5
+2018-07-26 18:44:43,199 - ERROR :  访问失败,重试次数4
+2018-07-26 18:44:43,911 - ERROR :  访问失败,重试次数3
+2018-07-26 18:44:44,088 - ERROR :  访问失败,重试次数2
+2018-07-26 18:44:44,136 - ERROR :  访问失败,重试次数1
+2018-07-26 18:44:44,183 - ERROR :  访问失败,重试次数0
+2018-07-26 18:44:44,183 - ERROR :  访问https://www.lagou.com/jobs/positionAjax.json测底失败
+2018-07-26 18:45:52,292 - ERROR :  访问失败,重试次数5
+2018-07-26 18:45:53,070 - ERROR :  访问失败,重试次数4
+2018-07-26 18:45:53,575 - ERROR :  访问失败,重试次数3
+2018-07-26 18:45:53,629 - ERROR :  访问失败,重试次数2
+2018-07-26 18:45:53,678 - ERROR :  访问失败,重试次数1
+2018-07-26 18:45:53,731 - ERROR :  访问失败,重试次数0
+2018-07-26 18:45:53,731 - ERROR :  访问https://www.lagou.com/jobs/positionAjax.json测底失败
+2018-07-26 18:46:23,725 - ERROR :  访问失败,重试次数5
+2018-07-26 18:46:24,392 - ERROR :  访问失败,重试次数4
+2018-07-26 18:46:24,926 - ERROR :  访问失败,重试次数3
+2018-07-26 18:46:24,981 - ERROR :  访问失败,重试次数2
+2018-07-26 18:46:25,040 - ERROR :  访问失败,重试次数1
+2018-07-26 18:46:25,121 - ERROR :  访问失败,重试次数0
+2018-07-26 18:46:25,121 - ERROR :  访问https://www.lagou.com/jobs/positionAjax.json测底失败
+2018-07-26 18:48:21,447 - ERROR :  success false,重试次数5
+2018-07-26 18:48:29,509 - ERROR :  success false,重试次数4
+2018-07-26 18:48:36,596 - ERROR :  success false,重试次数3
+2018-07-26 18:48:39,650 - ERROR :  success false,重试次数2
+2018-07-26 18:48:49,727 - ERROR :  success false,重试次数1
+2018-07-26 18:48:57,827 - ERROR :  success false,重试次数0
+2018-07-26 19:01:52,313 - ERROR :  success false,重试次数5
+2018-07-26 19:01:58,369 - ERROR :  success false,重试次数4
+2018-07-26 19:02:06,424 - ERROR :  success false,重试次数3
+2018-07-26 19:02:14,481 - ERROR :  success false,重试次数2
+2018-07-26 19:02:17,543 - ERROR :  success false,重试次数1
+2018-07-26 19:02:24,606 - ERROR :  success false,重试次数0
+2018-07-26 19:04:38,669 - ERROR :  success false,重试次数5
+2018-07-26 19:04:50,464 - ERROR :  success false,重试次数5
+2018-07-26 19:05:02,601 - ERROR :  success false,重试次数5
+2018-07-26 19:05:13,925 - ERROR :  success false,重试次数5
+2018-07-26 19:05:22,078 - ERROR :  success false,重试次数5
+2018-07-26 19:05:30,370 - ERROR :  success false,重试次数5
+2018-07-26 19:05:36,403 - ERROR :  success false,重试次数5
+2018-07-26 19:05:43,976 - ERROR :  success false,重试次数5
+2018-07-26 19:05:50,971 - ERROR :  success false,重试次数5
+2018-07-26 19:06:01,987 - ERROR :  success false,重试次数5
+2018-07-26 19:06:10,871 - ERROR :  success false,重试次数5
+2018-07-26 19:06:20,472 - ERROR :  success false,重试次数5
+2018-07-26 19:06:34,737 - ERROR :  success false,重试次数5
+2018-07-26 19:06:35,654 - ERROR :  success false,重试次数5
+2018-07-26 19:06:41,013 - ERROR :  success false,重试次数5
+2018-07-26 19:06:41,932 - ERROR :  success false,重试次数5
+2018-07-26 19:06:42,525 - ERROR :  success false,重试次数5
+2018-07-26 19:06:42,921 - ERROR :  success false,重试次数5
+2018-07-26 19:06:44,945 - ERROR :  success false,重试次数5
+2018-07-26 19:06:46,323 - ERROR :  success false,重试次数5
+2018-07-26 19:06:47,007 - ERROR :  success false,重试次数5
+2018-07-26 19:06:48,091 - ERROR :  success false,重试次数5
+2018-07-26 19:06:48,719 - ERROR :  success false,重试次数5
+2018-07-26 19:06:53,871 - ERROR :  success false,重试次数5
+2018-07-26 19:06:55,022 - ERROR :  success false,重试次数5
+2018-07-26 19:11:03,387 - ERROR :  success false,重试次数5
+2018-07-26 19:11:08,598 - ERROR :  success false,重试次数5
+2018-07-26 19:11:14,564 - ERROR :  success false,重试次数5
+2018-07-26 19:11:19,452 - ERROR :  success false,重试次数5
+2018-07-26 19:11:25,396 - ERROR :  success false,重试次数5
+2018-07-26 19:11:30,946 - ERROR :  success false,重试次数5
+2018-07-26 19:11:35,899 - ERROR :  success false,重试次数5
+2018-07-26 19:11:40,838 - ERROR :  success false,重试次数5
+2018-07-26 19:11:45,757 - ERROR :  success false,重试次数5
+2018-07-26 19:11:50,667 - ERROR :  success false,重试次数5
+2018-07-26 19:11:56,035 - ERROR :  success false,重试次数5
+2018-07-26 19:12:00,980 - ERROR :  success false,重试次数5
+2018-07-26 19:12:05,989 - ERROR :  success false,重试次数5
+2018-07-26 19:12:11,436 - ERROR :  success false,重试次数5
+2018-07-26 19:12:16,361 - ERROR :  success false,重试次数5
+2018-07-26 19:12:21,777 - ERROR :  success false,重试次数5
+2018-07-26 19:12:26,929 - ERROR :  success false,重试次数5
+2018-07-26 19:12:32,926 - ERROR :  success false,重试次数5
+2018-07-26 19:12:37,841 - ERROR :  success false,重试次数5
+2018-07-26 19:12:42,648 - ERROR :  success false,重试次数5
+2018-07-26 19:12:47,461 - ERROR :  success false,重试次数5
+2018-07-26 19:12:52,704 - ERROR :  success false,重试次数5
+2018-07-26 19:12:57,576 - ERROR :  success false,重试次数5
+2018-07-26 19:13:02,735 - ERROR :  success false,重试次数5
+2018-07-26 19:13:07,632 - ERROR :  success false,重试次数5
+2018-07-26 19:13:12,905 - ERROR :  success false,重试次数5
+2018-07-26 19:13:18,464 - ERROR :  success false,重试次数5
+2018-07-26 19:13:24,010 - ERROR :  success false,重试次数5
+2018-07-26 19:13:29,819 - ERROR :  success false,重试次数5
+2018-07-26 19:13:34,786 - ERROR :  success false,重试次数5
+2018-07-26 19:13:39,836 - ERROR :  success false,重试次数5
+2018-07-26 19:13:45,375 - ERROR :  success false,重试次数5
+2018-07-26 19:13:50,529 - ERROR :  success false,重试次数5
+2018-07-26 19:13:55,830 - ERROR :  success false,重试次数5
+2018-07-26 19:14:01,537 - ERROR :  success false,重试次数5
+2018-07-26 19:14:06,899 - ERROR :  success false,重试次数5
+2018-07-26 19:14:11,441 - ERROR :  success false,重试次数5
+2018-07-26 19:14:16,802 - ERROR :  success false,重试次数5
+2018-07-26 19:14:23,119 - ERROR :  success false,重试次数5
+2018-07-26 19:14:29,906 - ERROR :  success false,重试次数5
+2018-07-26 19:19:56,029 - ERROR :  success false,重试次数5
+2018-07-26 19:20:01,770 - ERROR :  success false,重试次数5
+2018-07-26 19:20:08,226 - ERROR :  success false,重试次数5
+2018-07-26 19:20:49,735 - ERROR :  success false,重试次数5
+2018-07-26 19:20:55,592 - ERROR :  success false,重试次数5
+2018-07-26 19:21:01,401 - ERROR :  success false,重试次数5
+2018-07-26 19:21:06,872 - ERROR :  success false,重试次数5
+2018-07-26 19:21:12,234 - ERROR :  success false,重试次数5
+2018-07-26 19:21:17,063 - ERROR :  success false,重试次数5
+2018-07-26 19:21:22,104 - ERROR :  success false,重试次数5
+2018-07-26 19:21:26,875 - ERROR :  success false,重试次数5
+2018-07-26 19:21:31,551 - ERROR :  success false,重试次数5
+2018-07-26 19:21:37,113 - ERROR :  success false,重试次数5
+2018-07-26 19:21:41,875 - ERROR :  success false,重试次数5
+2018-07-26 19:21:46,354 - ERROR :  success false,重试次数5
+2018-07-26 19:21:51,234 - ERROR :  success false,重试次数5
+2018-07-26 19:21:56,050 - ERROR :  success false,重试次数5
+2018-07-26 19:22:10,008 - ERROR :  success false,重试次数5
+2018-07-26 19:22:22,363 - ERROR :  success false,重试次数5
+2018-07-26 19:22:28,036 - ERROR :  success false,重试次数5
+2018-07-26 19:22:32,884 - ERROR :  success false,重试次数5
+2018-07-26 19:22:37,827 - ERROR :  success false,重试次数5
+2018-07-26 19:22:43,723 - ERROR :  success false,重试次数5
+2018-07-26 19:22:48,644 - ERROR :  success false,重试次数5
+2018-07-26 19:22:54,170 - ERROR :  success false,重试次数5
+2018-07-26 19:22:59,347 - ERROR :  success false,重试次数5
+2018-07-26 19:23:04,448 - ERROR :  success false,重试次数5
+2018-07-26 19:23:09,474 - ERROR :  success false,重试次数5
+2018-07-26 19:23:14,886 - ERROR :  success false,重试次数5
+2018-07-26 19:23:20,023 - ERROR :  success false,重试次数5
+2018-07-26 19:23:25,086 - ERROR :  success false,重试次数5
+2018-07-26 19:23:31,018 - ERROR :  success false,重试次数5
+2018-07-26 19:23:36,140 - ERROR :  success false,重试次数5
+2018-07-26 19:23:41,776 - ERROR :  success false,重试次数5
+2018-07-26 19:23:47,154 - ERROR :  success false,重试次数5
+2018-07-26 19:23:52,570 - ERROR :  success false,重试次数5
+2018-07-26 19:23:57,525 - ERROR :  success false,重试次数5
+2018-07-26 19:24:02,712 - ERROR :  success false,重试次数5
+2018-07-26 19:24:07,962 - ERROR :  success false,重试次数5
+2018-07-26 19:24:13,394 - ERROR :  success false,重试次数5
+2018-07-26 19:24:18,714 - ERROR :  success false,重试次数5
+2018-07-26 19:24:24,652 - ERROR :  success false,重试次数5
+2018-07-26 19:24:30,256 - ERROR :  success false,重试次数5
+2018-07-26 19:27:04,704 - ERROR :  success false,重试次数5
+2018-07-26 19:27:09,600 - ERROR :  success false,重试次数5
+2018-07-26 19:27:14,411 - ERROR :  success false,重试次数5
+2018-07-26 19:28:33,981 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:28:34,612 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:28:35,069 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:28:35,121 - ERROR :  success false,重试次数5
+2018-07-26 19:28:38,576 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:28:39,205 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:28:39,811 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:28:39,861 - ERROR :  success false,重试次数5
+2018-07-26 19:28:44,018 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:28:44,517 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:28:45,031 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:28:45,082 - ERROR :  success false,重试次数5
+2018-07-26 19:28:49,019 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:28:49,540 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:28:50,078 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:28:50,130 - ERROR :  success false,重试次数5
+2018-07-26 19:28:55,069 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:28:55,690 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:28:56,421 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:28:56,488 - ERROR :  success false,重试次数5
+2018-07-26 19:29:00,494 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:01,102 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:01,746 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:01,803 - ERROR :  success false,重试次数5
+2018-07-26 19:29:05,813 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:06,180 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:06,742 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:06,806 - ERROR :  success false,重试次数5
+2018-07-26 19:29:10,822 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:11,477 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:12,052 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:12,106 - ERROR :  success false,重试次数5
+2018-07-26 19:29:15,904 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:16,348 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:16,851 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:16,899 - ERROR :  success false,重试次数5
+2018-07-26 19:29:20,805 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:21,275 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:21,871 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:21,918 - ERROR :  success false,重试次数5
+2018-07-26 19:29:25,812 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:27,072 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:27,762 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:27,812 - ERROR :  success false,重试次数5
+2018-07-26 19:29:31,529 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:32,142 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:32,537 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:32,589 - ERROR :  success false,重试次数5
+2018-07-26 19:29:36,595 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:37,221 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:37,837 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:37,885 - ERROR :  success false,重试次数5
+2018-07-26 19:29:41,636 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:42,132 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:42,742 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:42,792 - ERROR :  success false,重试次数5
+2018-07-26 19:29:46,444 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:47,045 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:47,571 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:47,624 - ERROR :  success false,重试次数5
+2018-07-26 19:29:51,597 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:51,985 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:52,465 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:52,516 - ERROR :  success false,重试次数5
+2018-07-26 19:29:57,182 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:58,507 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:59,094 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:29:59,144 - ERROR :  success false,重试次数5
+2018-07-26 19:30:05,467 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:30:06,083 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:30:06,739 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:30:06,822 - ERROR :  success false,重试次数5
+2018-07-26 19:30:10,995 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:30:11,528 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:30:12,133 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:30:12,182 - ERROR :  success false,重试次数5
+2018-07-26 19:30:17,559 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:30:17,953 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:30:18,324 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:30:19,608 - ERROR :  success false,重试次数5
+2018-07-26 19:30:23,601 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:30:24,211 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:30:24,734 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:30:24,792 - ERROR :  success false,重试次数5
+2018-07-26 19:30:28,594 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:30:29,205 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:30:29,724 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:30:29,777 - ERROR :  success false,重试次数5
+2018-07-26 19:30:33,845 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:30:34,553 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:30:35,599 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:30:35,718 - ERROR :  success false,重试次数5
+2018-07-26 19:30:40,915 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:30:41,641 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:30:42,155 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:30:42,211 - ERROR :  success false,重试次数5
+2018-07-26 19:30:46,925 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:30:47,427 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:30:48,096 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:30:48,347 - ERROR :  success false,重试次数5
+2018-07-26 19:30:52,619 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:30:53,444 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:30:54,194 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:30:54,291 - ERROR :  success false,重试次数5
+2018-07-26 19:30:59,057 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:30:59,728 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:31:00,336 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:31:00,389 - ERROR :  success false,重试次数5
+2018-07-26 19:31:04,515 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:31:04,966 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:31:06,102 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:31:06,155 - ERROR :  success false,重试次数5
+2018-07-26 19:31:10,351 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:31:10,973 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:31:11,509 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:31:11,621 - ERROR :  success false,重试次数5
+2018-07-26 19:31:15,874 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:31:16,578 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:31:16,942 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:31:16,992 - ERROR :  success false,重试次数5
+2018-07-26 19:31:20,781 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:31:21,145 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:31:21,725 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:31:21,786 - ERROR :  success false,重试次数5
+2018-07-26 19:31:25,717 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:31:26,326 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:31:27,497 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:31:27,549 - ERROR :  success false,重试次数5
+2018-07-26 19:31:35,958 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:31:37,113 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:31:42,883 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:31:42,933 - ERROR :  success false,重试次数5
+2018-07-26 19:31:47,055 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:31:48,429 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:31:48,939 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:31:48,991 - ERROR :  success false,重试次数5
+2018-07-26 19:31:53,220 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:31:54,041 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:31:54,617 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:31:54,665 - ERROR :  success false,重试次数5
+2018-07-26 19:31:58,581 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:31:59,054 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:31:59,563 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:31:59,616 - ERROR :  success false,重试次数5
+2018-07-26 19:32:03,760 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:32:04,252 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:32:04,674 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:32:04,722 - ERROR :  success false,重试次数5
+2018-07-26 19:32:07,345 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:32:07,857 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:32:08,361 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:32:09,078 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:32:09,126 - ERROR :  success false,重试次数5
+2018-07-26 19:32:13,081 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:32:13,433 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:32:13,991 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:32:14,042 - ERROR :  success false,重试次数5
+2018-07-26 19:32:18,416 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:32:19,437 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:32:20,540 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:32:20,587 - ERROR :  success false,重试次数5
+2018-07-26 19:32:24,531 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'
+2018-07-26 19:32:24,744 - ERROR :  保存数据出错:'NoneType' object has no attribute 'info'

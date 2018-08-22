@@ -1,0 +1,124 @@
+{% extends 'backend/backend_base.html' %}
+{% load static %}
+
+{% block contents %}
+    <div class="bland">
+        <a href="">报障管理 </a>/ 报障列表
+    </div>
+
+    <div class="col-md-12 trouble-list">
+        <div class="panel panel-default">
+            <div class="panel-heading"><span class="glyphicon glyphicon-calendar " aria-hidden="true"></span>&nbsp;报障列表
+                <a href="/backend/trouble_handled"
+                   class="pull-right btn-default btn {% if btn_status == 1 %}active{% endif %}">已处理</a>
+                <a href="/backend/trouble_handling"
+                   class="pull-right btn-default btn {% if btn_status == 0 %}active{% endif %}">待处理</a>
+                <a href="/backend/trouble_handler"
+                   class="pull-right btn-default btn {% if btn_status == -1 %}active{% endif %}">未处理</a>
+            </div>
+            <div class="panel-body">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>报障标题</th>
+                        <th>状态</th>
+                        <th>创建时间</th>
+                        <th>提交者</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for data in datas %}
+                        <tr>
+
+                            <td>{{ data.title }}</td>
+                            <td>{{ data.get_status_display }}</td>
+                            <td>{{ data.submit_time | date:'Y-m-d H:i ' }}</td>
+                            <td>{{ data.submitter.username |default:"" }}</td>
+                            <td>
+
+
+                                <a href="/backend/trouble_handler/{{ data.id }}/show" type="button"
+                                   class="btn btn-default"><span class="glyphicon glyphicon-file"
+                                                                 aria-hidden="true"></span>&nbsp;查看内容
+                                </a>
+
+                                {% if data.status == -1 %}
+
+                                    <a href="/backend/trouble_handler/{{ data.id }}/accept" type="button"
+                                       class="btn btn-primary "><span class="glyphicon glyphicon-file"
+                                                                      aria-hidden="true"></span>&nbsp;接单
+                                    </a>
+                                {% endif %}
+                                {% if data.status == 0 %}
+                                    <a tmp-href="/backend/trouble_handler/{{ data.id }}/delete" type="button"
+                                       class="btn btn-danger delete-btn"><span class="glyphicon glyphicon-remove"
+                                                                               aria-hidden="true"></span>&nbsp;撤销
+                                    </a>
+
+                                    <a href="/backend/trouble_handler/{{ data.id }}/solute" type="button"
+                                       class="btn btn-success "><span class="glyphicon glyphicon-file"
+                                                                      aria-hidden="true"></span>&nbsp;前往解决
+                                    </a>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class=" pagetor pull-right col-md-4 ">
+        {% if page.total_count > 1 %}
+            <ul class="pagination">
+                {#            <li>#}
+                {#                <a href="#" aria-label="Previous">#}
+                {#                    <span aria-hidden="true">«</span>#}
+                {#                </a>#}
+                {#            </li>#}
+                {#            <li><a href="#">1</a></li>#}
+                {#            <li><a href="#">2</a></li>#}
+                {#            <li><a href="#">3</a></li>#}
+                {#            <li><a href="#">4</a></li>#}
+                {#            <li><a href="#">5</a></li>#}
+                {#            <li>#}
+                {#                <a href="#" aria-label="Next">#}
+                {#                    <span aria-hidden="true">»</span>#}
+                {#                </a>#}
+                {{ page_str }}
+                </li>
+            </ul>
+        {% endif %}
+    </div>
+{% endblock contents %}
+
+{% block js %}
+
+    $(function(){
+    $('.delete-btn').click(function(){
+    var href = $(this).attr('tmp-href')
+    var trouble_obj = $(this).parentsUntil('tbody');
+
+
+
+    $.ajax({
+    url:href,
+    type:'GET',
+    dataType:'json',
+    traditional: true,
+    success:function(arg){
+    console.log(arg);
+    trouble_obj.remove()
+
+    }
+
+    })
+    })
+
+    })
+
+
+
+{% endblock js %}

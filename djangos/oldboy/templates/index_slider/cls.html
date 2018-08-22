@@ -1,0 +1,130 @@
+{%extends 'base.html'%}
+{% block body %}
+
+<div class="choice_con">
+    <div class="direct fl">
+        <span class='fl'>方向:</span>
+        <ul>
+            <li>
+                <button type="" {% if direct == 0 %} class="active" {%endif%} tag="0">全部</button>
+            </li>
+            {%for obj in directs%}
+            <li>
+                <button type="" tag="{{obj.id}}" {% ifequal direct obj.id %} class="active" {%endifequal%}>
+                    {{obj.type}}
+                </button>
+            </li>
+            {%endfor%}
+        </ul>
+    </div>
+
+    <div class="type fl">
+        <span class="fl">分类:</span>
+        <ul>
+            <li>
+                <button type="" {% ifequal type 0 %} class="active" {%endifequal%} tag="0">全部</button>
+            </li>
+            {% for obj in types%}
+            <li>
+                <button type="" tag="{{obj.id}}" {% ifequal type obj.id %} class="active" {%endifequal%}>{{obj.type}}
+                </button>
+            </li>
+            {%endfor%}
+        </ul>
+    </div>
+
+    <div class="level fl">
+        <span class="fl">难度:</span>
+        <ul>
+            <li>
+                <button type="" {% ifequal level 0 %} class="active" {%endifequal%} tag="0">全部</button>
+            </li>
+            {%for key,value in levels.items%}
+            <li>
+                <button type="" tag="{{key}}" {% ifequal key level %} class="active" {%endifequal%}>{{value}}</button>
+            </li>
+            {%endfor%}
+        </ul>
+    </div>
+
+</div>
+
+
+<div class="video_con clearfix">
+    <h3 class='title'>共为你找到<span>{{courses | length}}</span>个视频:</h3>
+
+    {% for obj in page%}
+    <div class="video fl">
+        <a href="">
+            <img src="/static/{{obj.img}}" alt="{{obj.title}}">
+            <h3>{{obj.title}}</h3>
+            <p>{{obj.content|slice:'20'}} ...</p>
+        </a>
+    </div>
+    {%endfor%}
+</div>
+
+{{pages}}
+
+<div class="page_con">
+    <div class="page">
+        <ul>
+            {% if page.has_previous %}
+            <li><a href="?p={{ page.previous_page_number }}">上一页</a></li>
+            {% else %}
+             <li><a href="javascript:;" class="disable">上一页</a></li>
+            {%endif%}
+            {% for i in page.paginator.page_num_range %}
+            <li><a href="?p={{ i }}">{{i}}</a></li>
+            {%endfor%}
+            {% if page.has_next %}
+            <li><a href="?p={{ page.next_page_number }}">下一页</a></li>
+             {% else %}
+             <li><a href="javascript:;" class="disable">下一页</a></li>
+            {%endif%}
+            <li>共<span>{{ page.num_pages }}</span>页/<span>{{courses | length}}</span>条数据</li>
+            <li>当前:<span>{{ page.number }}</span>页</li>
+        </ul>
+    </div>
+</div>
+{% block js %}
+
+<script type="text/javascript" src='../static/js/jquery-1.12.4.min.js'></script>
+<script type="text/javascript">
+
+    function href() {
+        var direct = $('.direct .active').attr('tag');
+        var type = $('.type .active').attr('tag');
+        var level = $('.level .active').attr('tag');
+        location.href = '/stu/course' + '_' + direct + '_' + type + '_' + level;
+    }
+
+    $('.direct li:not(.active)').click(function (event) {
+        $(this).children().addClass('active');
+        $(this).siblings().children().removeClass('active');
+        href()
+    });
+
+    $('.type li:not(.active)').each(function (index, val) {
+        $(this).click(function (event) {
+            $(this).children().addClass('active');
+            $(this).siblings().children().removeClass('active');
+            href()
+        });
+        /* iterate through array or object */
+    });
+    $('.level li:not(.active)').each(function (index, val) {
+        $(this).click(function (event) {
+            $(this).children().addClass('active');
+            $(this).siblings().children().removeClass('active');
+            href()
+        });
+
+        /* iterate through array or object */
+    });
+
+
+</script>
+{% endblock js%}
+
+{% endblock body %}

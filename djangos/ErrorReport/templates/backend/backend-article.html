@@ -1,0 +1,120 @@
+{% extends 'backend/backend_base.html' %}
+{% load static %}
+
+{% block contents %}
+    <div class="bland">
+        <a href="">文章管理 </a>/ 文章列表
+    </div>
+
+    <div class="article-bland">
+        <h3><span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;搜索条件</h3>
+    </div>
+
+    <div class="filter-conditions">
+
+        <div class="article-tag">
+            <ul class="nav nav-pills col-md-offset-1 ">
+                <li role="presentation" class="active"><a href="#">全部</a></li>
+                <li role="presentation"><a href="#">.NET</a></li>
+                <li role="presentation"><a href="#">领域驱动</a></li>
+                <li role="presentation"><a href="#">Python</a></li>
+                <li role="presentation"><a href="#">设计模式</a></li>
+                <li role="presentation"><a href="#">Letcode</a></li>
+            </ul>
+        </div>
+
+        <div class="article-category">
+            <ul class="nav nav-pills col-md-offset-1 ">
+                <li role="presentation" class="active"><a href="#">全部</a></li>
+                <li role="presentation"><a href="#">Python</a></li>
+                <li role="presentation"><a href="#">Linux</a></li>
+                <li role="presentation"><a href="#">OpenStack</a></li>
+                <li role="presentation"><a href="#">Golang</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-12 article-list">
+            <div class="panel panel-default">
+                <div class="panel-heading"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>&nbsp;搜索文章
+                    (<span>3</span>) 篇
+                </div>
+                <div class="panel-body">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>文章标题</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+
+                            <td>妹子</td>
+                            <td>
+                                <button type="button" class="btn btn-danger"><span
+                                        class="glyphicon glyphicon-remove" aria-hidden="true"></span>&nbsp;删除
+                                </button>
+                                |
+                                <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-file"
+                                                                                    aria-hidden="true"></span>&nbsp;编辑
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+
+                            <td>Coding</td>
+                            <td>
+                                <button type="button" class="btn btn-danger"><span
+                                        class="glyphicon glyphicon-remove" aria-hidden="true"></span>&nbsp;删除
+                                </button>
+                                |
+                                <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-file"
+                                                                                    aria-hidden="true"></span>&nbsp;编辑
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+
+                            <td>保持心性在什么地方是最难？</td>
+                            <td>
+                                <button type="button" class="btn btn-danger"><span
+                                        class="glyphicon glyphicon-remove" aria-hidden="true"></span>&nbsp;删除
+                                </button>
+                                |
+                                <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-file"
+                                                                                    aria-hidden="true"></span>&nbsp;编辑
+                                </button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row  pull-right">
+        <div class="col-md-12  col-md-pull-1">
+            <ul class="pagination">
+                <li>
+                    <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">«</span>
+                    </a>
+                </li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                    <a href="#" aria-label="Next">
+                        <span aria-hidden="true">»</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+{% endblock contents %}

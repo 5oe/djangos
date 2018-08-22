@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="my_pratice@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.1">
+    <root id="1"/>
+    <schema id="2" parent="1" name="my_pratice">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="love"/>
+    <schema id="5" parent="1" name="mysql"/>
+    <schema id="6" parent="1" name="performance_schema"/>
+    <schema id="7" parent="1" name="sys"/>
+    <table id="8" parent="2" name="class"/>
+    <table id="9" parent="2" name="course"/>
+    <table id="10" parent="2" name="ll">
+      <Comment>fdfdf</Comment>
+    </table>
+    <table id="11" parent="2" name="qq"/>
+    <table id="12" parent="2" name="qq1"/>
+    <table id="13" parent="2" name="s1"/>
+    <table id="14" parent="2" name="score"/>
+    <table id="15" parent="2" name="staff_table"/>
+    <table id="16" parent="2" name="student"/>
+    <table id="17" parent="2" name="stuid1"/>
+    <table id="18" parent="2" name="teacher"/>
+    <table id="19" parent="2" name="temp"/>
+    <table id="20" parent="2" name="tmp"/>
+    <table id="21" parent="2" name="tmp2"/>
+    <view id="22" parent="2" name="sview">
+      <Comment>VIEW</Comment>
+    </view>
+    <view id="23" parent="2" name="v2">
+      <Comment>VIEW</Comment>
+    </view>
+    <routine id="24" parent="2" name="auto_insert2">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <column id="25" parent="8" name="cid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="26" parent="8" name="caption">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="27" parent="8" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>cid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="28" parent="9" name="cid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="29" parent="9" name="cname">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="9" name="teacher_id">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="31" parent="9" name="teacher_id">
+      <ColNames>teacher_id</ColNames>
+    </index>
+    <key id="32" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>cid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="33" parent="9" name="course_ibfk_1">
+      <ColNames>teacher_id</ColNames>
+      <RefSchemaName>my_pratice</RefSchemaName>
+      <RefTableName>teacher</RefTableName>
+      <RefColNames>tid</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="34" parent="10" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="35" parent="10" name="name">
+      <Position>2</Position>
+      <DataType>varchar(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="36" parent="10" name="id">
+      <ColNames>id</ColNames>
+    </index>
+    <foreign-key id="37" parent="10" name="ll_ibfk_1">
+      <ColNames>id</ColNames>
+      <RefSchemaName>my_pratice</RefSchemaName>
+      <RefTableName>teacher</RefTableName>
+      <RefColNames>tid</RefColNames>
+    </foreign-key>
+    <column id="38" parent="11" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="39" parent="11" name="id">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="40" parent="11" name="id">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>id</UnderlyingIndexName>
+    </key>
+    <column id="41" parent="12" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="42" parent="12" name="id">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="43" parent="12" name="id">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>id</UnderlyingIndexName>
+    </key>
+    <column id="44" parent="13" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="45" parent="13" name="name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="46" parent="13" name="gender">
+      <Position>3</Position>
+      <DataType>char(6)|0</DataType>
+    </column>
+    <column id="47" parent="13" name="email">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <index id="48" parent="13" name="email_s1_index">
+      <ColNames>email</ColNames>
+    </index>
+    <index id="49" parent="13" name="sq_id_index">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="50" parent="13" name="sq_id_index">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>sq_id_index</UnderlyingIndexName>
+    </key>
+    <column id="51" parent="14" name="sid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="52" parent="14" name="student_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="53" parent="14" name="course_id">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="54" parent="14" name="number">
+      <Position>4</Position>
+      <DataType>decimal(4,1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="55" parent="14" name="course_id">
+      <ColNames>course_id</ColNames>
+    </index>
+    <index id="56" parent="14" name="student_id">
+      <ColNames>student_id</ColNames>
+    </index>
+    <key id="57" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>sid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="58" parent="14" name="score_ibfk_1">
+      <ColNames>student_id</ColNames>
+      <RefSchemaName>my_pratice</RefSchemaName>
+      <RefTableName>student</RefTableName>
+      <RefColNames>sid</RefColNames>
+    </foreign-key>
+    <foreign-key id="59" parent="14" name="score_ibfk_2">
+      <ColNames>course_id</ColNames>
+      <RefSchemaName>my_pratice</RefSchemaName>
+      <RefTableName>course</RefTableName>
+      <RefColNames>cid</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="60" parent="14" name="score_ibfk_3">
+      <ColNames>course_id</ColNames>
+      <RefSchemaName>my_pratice</RefSchemaName>
+      <RefTableName>course</RefTableName>
+      <RefColNames>cid</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="61" parent="15" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="62" parent="15" name="phone">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="63" parent="15" name="sname">
+      <Position>3</Position>
+      <DataType>varchar(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="64" parent="15" name="age">
+      <Position>4</Position>
+      <DataType>int(5)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="65" parent="15" name="dept">
+      <Position>5</Position>
+      <DataType>varchar(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="66" parent="15" name="enroll_date">
+      <Position>6</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="67" parent="15" name="phone">
+      <ColNames>phone</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="68" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="69" parent="15" name="phone">
+      <ColNames>phone</ColNames>
+      <UnderlyingIndexName>phone</UnderlyingIndexName>
+    </key>
+    <column id="70" parent="16" name="sid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="71" parent="16" name="sname">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="72" parent="16" name="gender">
+      <Position>3</Position>
+      <DataType>enum(&apos;男&apos;, &apos;女&apos;)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="73" parent="16" name="class_id">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="74" parent="16" name="class_id">
+      <ColNames>class_id</ColNames>
+    </index>
+    <key id="75" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>sid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="76" parent="16" name="student_ibfk_1">
+      <ColNames>class_id</ColNames>
+      <RefSchemaName>my_pratice</RefSchemaName>
+      <RefTableName>class</RefTableName>
+      <RefColNames>cid</RefColNames>
+    </foreign-key>
+    <column id="77" parent="17" name="sid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="78" parent="17" name="student_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="79" parent="17" name="course_id">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="80" parent="17" name="number">
+      <Position>4</Position>
+      <DataType>decimal(4,1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="81" parent="18" name="tid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="82" parent="18" name="tname">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="83" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>tid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="84" parent="19" name="name">
+      <Position>1</Position>
+      <DataType>char(19)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="85" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>name</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="86" parent="20" name="name">
+      <Position>1</Position>
+      <Comment>对你的是非法的</Comment>
+      <DataType>char(11)|0</DataType>
+    </column>
+    <column id="87" parent="20" name="id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="88" parent="20" name="aid">
+      <Position>3</Position>
+      <DataType>int(5)|0</DataType>
+    </column>
+    <column id="89" parent="20" name="love">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="90" parent="20" name="time">
+      <Position>5</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <index id="91" parent="20" name="aid">
+      <ColNames>aid</ColNames>
+    </index>
+    <column id="92" parent="21" name="name">
+      <Position>1</Position>
+      <DataType>char(19)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="93" parent="22" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="94" parent="22" name="name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="95" parent="22" name="gender">
+      <Position>3</Position>
+      <DataType>char(6)|0</DataType>
+    </column>
+    <column id="96" parent="22" name="email">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="97" parent="23" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="98" parent="23" name="name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="99" parent="23" name="gender">
+      <Position>3</Position>
+      <DataType>char(6)|0</DataType>
+    </column>
+    <column id="100" parent="23" name="email">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+  </database-model>
+</dataSource>
