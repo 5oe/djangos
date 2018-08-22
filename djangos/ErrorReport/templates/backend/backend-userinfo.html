@@ -1,0 +1,73 @@
+{% extends 'backend/backend_base.html' %}
+{% load static %}
+
+{% block contents %}
+    <div class="bland">
+        <a href="">用户管理 </a>/ 用户信息
+    </div>
+    <form action="" method="get">
+
+        <div class="col-md-9 ">
+            <div class="form-group col-md-12">
+                <label class='col-md-2 control-label'>用户名:</label>
+                <div class="col-md-10">
+                    wupeiqi
+                </div>
+            </div>
+
+            <div class="form-group col-md-12">
+                <label class='col-md-2 control-label'>邮箱:</label>
+                <div class="col-md-10">
+                    973697101@qq.com
+                </div>
+            </div>
+
+
+            <div class="form-group col-md-12">
+                <label class='col-md-2 control-label' for='name'>昵称:</label>
+                <div class="col-md-10">
+                    <input type="text" name="" placeholder="请输入昵称" id='name' class='form-control col-md-4'>
+                </div>
+            </div>
+
+
+            <div class="form-group col-md-12">
+                <label class='col-md-2 control-label' for='blog-address'>博客地址: </label>
+                <div class="col-md-10">
+                    <input type="text" name="" placeholder="如:wupeiqi的个人博客地址为www.xxxx/wupeiqi.html"
+                           id='blog-address' class='form-control col-md-4'>
+                </div>
+            </div>
+
+
+            <div class="form-group col-md-12">
+                <label class='col-md-2 control-label' for='blog-title'>博客主题: </label>
+                <div class="col-md-10">
+                    <input type="text" name="" placeholder='请输入博客主题' id='blog-title'
+                           class='form-control col-md-4'>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-3 user-img-info">
+            <a href=""><img src="{% static 'img/timg.jpeg' %}" alt="用户头像" class="user-img pull-left"></a>
+            <p class='img-tips'>点击图片更换(<a href="">撤销</a>)</p>
+        </div>
+
+        <div class="form-group col-md-12">
+            <label class='col-md-2 control-label article-text-label' for='article-text'>个性签名: </label>
+            <div class="col-md-9 article-text">
+                            <textarea name="" class="form-control" rows='11' id='article-text'
+                                      placeholder="请输入个性签名内容"></textarea>
+            </div>
+        </div>
+
+        <div class="col-md-2 col-md-push-8">
+            <button type="submit" class="btn btn-default pull-right">保存</button>
+        </div>
+    </form>
+{% endblock contents %}
+
+{% block bakcend_js %}
+
+{% endblock bakcend_js %}

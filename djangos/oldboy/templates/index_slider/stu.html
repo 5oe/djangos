@@ -1,0 +1,85 @@
+{%extends 'base.html'%}
+
+{% block body %}
+
+
+<div class="about_con">
+    <h1>关于老<span>男</span>孩教育</h1>
+    <p>
+        听完他这三年的故事，再回头来看自己，感觉真的是一无是处。既没有下海创业的勇气，在体制内又找不到适合的出路，拿着饿不死的工资和看似不错的福利，好像温水里煮着的青蛙，始终感觉不到危险的存在，在大公司里安静的当一颗螺丝钉，还觉得领导对你很重视，以为自己很厉害，其实全都是平台的功劳而已</p>
+
+</div>
+
+
+<div class="stu_con clearfix">
+
+    <div class='item'>
+    </div>
+
+
+    <div class='item'>
+    </div>
+
+    <div class='item'>
+
+    </div>
+
+
+    {% endblock body %}
+
+    {% block js %}
+
+    <script type="text/javascript" src='../static/js/jquery-1.12.4.min.js'></script>
+    <script type="text/javascript">
+        $(function () {
+            Request();
+            ScollEvent();
+
+
+             function Request() {
+                $.ajax({
+                        url: '/stu/stu',
+                        data: {},
+                        type: 'GET',
+                        dataType: 'JSON',
+                        traditional: true,
+                        success: function (obj) {
+                            var $item = $('.item');
+                            $.each(obj, function (index, stu) {
+
+                                var $ele = $('<div class="stu "> <a href="" class="stu_href"><img src="" alt="" class="stu_img"><div class="stu_main"><h1 class="stu_name"></h1><h3>公司:<span class="stu_company"></span></h3><h3>薪资:<span class="stu_salary"></span></h3><p class="stu_content"></p></div></a></div></div>')
+
+
+                                $ele.find('.stu_name').append(stu[1])
+                                $ele.find('.stu_img').attr('src', '/static/' + stu[3])
+
+                                $ele.find('.stu_company').append(stu[5])
+                                $ele.find(".stu_content").append(stu[6])
+                                $ele.find(".stu_salary").append(stu[4] + '元/月')
+
+                                $item.eq(index % 3).append($ele)
+                            });
+                        }
+
+                    }
+                )
+            }
+
+            function ScollEvent() {
+                $(window).scroll(function (event) {
+                    var dh = $(document).height();
+                    var wh = $(window).height();
+                    var top = $(window).scrollTop();
+
+                    if (wh + top == dh) {
+                        Request()
+                    }
+                })
+            }
+        })
+
+
+
+
+    </script>
+    {% endblock js%}

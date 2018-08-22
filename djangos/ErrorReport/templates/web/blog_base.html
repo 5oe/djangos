@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load filter %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/blog/default.css' %}">
+{% endblock css %}
+
+{% block body %}
+    <div class="blog-header">
+        <h1 id='blog-title'>{{ blog.title }}</h1>
+        <div class="right-link pull-right tilte_href">
+            <ul>
+                <li><a href="">首页</a></li>
+                <li><a href="">个人首页</a></li>
+                <li><a href="">管理</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3 ">
+            <ul>
+                公告
+                <li>昵称:<span>{{ blog.user.username }}</span></li>
+                <li>粉丝:<span>{{ fans_count }}</span></li>
+                <li>关注:<span>{{ star_count }}</span></li>
+                <li>邮箱:<span>{{ blog.user.email }}</span></li>
+                <li><span>{{ blog.signature }}</span></li>
+            </ul>
+
+            <ul>
+                标签
+                {% for tag in tags %}
+                    <li>
+                        <a href="/{{ blog.surfix }}/tag={{ tag.id }}">{{ tag.title }}(<span>{{ tag.article2tag_set.count }}</span>)</a>
+                    </li>
+                {% endfor %}
+            </ul>
+
+            <ul>
+                分类
+                {% for kind in kinds %}
+                    <li>
+                        <a href="/{{ blog.surfix }}/type={{ kind.id }}">{{ kind.title }}(<span>{{ kind.articleinfo_set.count }}</span>)</a>
+                    </li>
+                {% endfor %}
+            </ul>
+
+            <ul>
+                时间
+                {% for date in dates %}
+                    <li><a href="/{{ blog.surfix }}/date={{ date.0 }}">{{ date.0 }}&nbsp;(<span>{{ date.1 }}</span>)</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="col-md-8 blog-contents">
+
+            {% block blog_contens %}{% endblock blog_contens %}
+
+        </div>
+    </div>
+
+{% endblock body %}

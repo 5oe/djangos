@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/plugin/bootstrap-3.3.7-dist/css/bootstrap.css">
+
+</head>
+
+<body>
+<div class="container">
+    <h1>用户表</h1>
+    <div class="btn-group" role="group" aria-label="...">
+        <button type="button" class="btn btn-default" id="idCheckAll">全选</button>
+        <button type="button" class="btn btn-default" id="idCheckReverse">反选</button>
+        <button type="button" class="btn btn-default" id="idCancel">取消</button>
+        <button type="button" class="btn btn-default" id="idEditMode">进入编辑模式</button>
+        <button type="button" class="btn btn-default" id="idSave">保存</button>
+    </div>
+    {#    page-num由主页面url传至json请求的url，正则有json请求的url负责分页功能#}
+    <table class="table table-bordered" page-num="{{ page_num }}">
+        <thead id="table-header">
+        </thead>
+
+        <tbody id="table-body">
+        </tbody>
+    </table>
+</div>
+
+<div class="container footer"></div>
+
+<script src="/static/js/jquery-1.12.4.min.js"></script>
+<script src="/static/plugin/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="/static/js/mine/initByAjax.js"></script>
+<script>
+    $(function () {
+        $.initTable('/backend/index-json');
+    });
+</script>
+</body>

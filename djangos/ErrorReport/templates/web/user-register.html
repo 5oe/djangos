@@ -1,0 +1,248 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+    <div class="register-body container" xmlns="http://www.w3.org/1999/html">
+        <form action="/register" method="POST" class="register-contents container" id="register-form">
+            {% csrf_token %}
+            <h1 class="title">用户注册</h1>
+            <div class="form-group">
+                <label for="username">用户名</label>
+                <input type="text" name="username" placeholder="请输入用户名" class='form-control' id='username'>
+                <span class="msg">{{ form.username.errors.0 }}</span>
+            </div>
+
+            <div class="form-group">
+                <label for="password">密码</label>
+                <input type="password" name="password" placeholder="请输入密码" class='form-control' id='password'>
+                <span class="msg">{{ form.password.errors.0 }}</span>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm">确认密码</label>
+                <input type="password" name="confirm" placeholder="请再次输入密码" class='form-control' id='confirm'>
+                <span class="msg">{{ form.confirm.errors.0 }}</span>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">电话号码</label>
+                <input type="text" name="phone" placeholder="请输入电话号码" class='form-control' id='phone'>
+                <span class="msg">{{ form.phone.errors.0 }}</span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">邮箱</label>
+                <input type="text" name="email" placeholder="请输入邮箱" class='form-control' id='email'>
+                <span class=" msg">{{ form.email.errors.0 }}</span>
+            </div>
+
+            <div class="form-group">
+                <div>
+                    <label for="verify ">验证码</label>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-md-8">
+                        <input type="text" name="verify" placeholder="请输入验证码" class='form-control' id='verify'>
+                        <span class=" msg">{{ form.verify.errors.0 }}</span>
+                    </div>
+                    <div class="form-group col-md-4 ">
+                        <img src="/verify_code" alt="验证码" class="verify-code"></div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-12 ">
+                <input type="submit" class="btn btn-primary form-control register-btn" value='注册'>
+            </div>
+        </form>
+    </div>
+{% endblock body %}
+
+
+{% block js %}
+
+
+    function Check(){
+    this.username_ok = true;
+    this.password_ok = true;
+    this.confirm_ok =true;
+    this.phone_ok =true;
+    this.email_ok=true;
+    this.verify_ok=true;
+
+    this.check=function(){
+    if (this.username_ok&&this.password_ok&&this.confirm_ok&&this.phone_ok&&this.email_ok&&this.verify_ok)
+    return true;
+    else
+    return false;
+    }
+    }
+
+    var check_obj = new Check();
+
+    function check_username(){
+    var $username = $('#username');
+    var val = $username.val()
+
+    if (!val.length){
+    $username.next().html('用户名不能为空');
+    $username.next().show();
+    check_obj.username_ok=false;
+    return false;
+    }
+
+    $.ajax({
+    url:'/register_check_username',
+    type:'GET',
+    data:{'username':val},
+    dataType:'JSON',
+    success:function(arg){
+    var res = arg.res;
+    if (!res){
+    $username.next().html('用户名已经存在');
+    $username.next().show();
+    check_obj.username_ok=false;
+    return false;
+    }
+    else{
+    $username.next().hide();
+    check_obj.username_ok=true;
+    return true;
+    }
+    }
+    })
+    }
+
+
+    function check_password(){
+    var $password = $('#password');
+    var val = $password.val()
+    if (val.length<6){
+    $password.next().html('密码不能少于6位');
+    $password.next().show();
+    check_obj.password_ok=false;
+    return false;
+    }
+
+    var re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).*$/
+    var res = re.test(val);
+    if (!res){
+    $password.next().html('密码必须包含数字和字母大小写');
+    $password.next().show();
+    check_obj.password_ok=false;
+    return false;
+    }
+    else{
+    $password.next().hide();
+    check_obj.password_ok=true;
+    return true;
+    }
+    }
+
+    function check_confirm(){
+    var $password = $('#password');
+    var $confirm = $('#confirm');
+
+    var res = $password.val()==$confirm.val();
+    if (!res){
+    $confirm.next().html('两次密码输入不一致');
+    $confirm.next().show();
+    check_obj.confirm_ok=false;
+    return false;
+    }
+    else{
+    $confirm.next().hide();
+    check_obj.confirm_ok=true;
+    return true;
+    }
+    }
+
+    function check_phone(){
+    var $phone = $('#phone');
+    var val = $phone.val();
+    var re = /^1\d{10,11}$/
+    var res = re.test(val);
+    if (!res){
+    $phone.next().html('手机号码格式错误');
+    $phone.next().show();
+    check_obj.phone_ok=false;
+    return false;
+    }
+    else{
+    $phone.next().hide();
+    check_obj.phone_ok=true;
+    return true;
+    }
+    }
+
+    function check_email(){
+    var $email = $('#email');
+    var val = $email.val();
+    var re = /^\w+@[1-9a-z]+\.[a-z]+$/
+    var res = re.test(val);
+    if (!res){
+    $email.next().html('邮箱格式错误');
+    $email.next().show();
+    check_obj.email_ok=false;
+    return false;
+    }
+    else{
+    $email.next().hide();
+    check_obj.email_ok=true;
+    return true;
+    }
+    }
+
+
+    function check_verify(){
+    var $verify = $('#verify');
+    var val = $verify.val();
+    if (!val){
+    $verify.next().html('验证码不能为空');
+    $verify.next().show();
+    check_obj.verify_ok=false;
+    return false;
+    }
+    else{
+    $verify.next().hide();
+    check_obj.verify_ok=true;
+    return true;
+    }
+    }
+
+    $('#username').blur(function(event) {
+    check_username();
+    });
+
+    $('#password').blur(function(event) {
+    check_password();
+    });
+
+    $('#confirm').blur(function(event) {
+    check_confirm();
+    });
+
+    $('#phone').blur(function(event){
+    check_phone();
+    })
+
+    $('#email').blur(function(event){
+    check_email();
+    })
+
+    $('.verify-code').click(function(event){
+    var src = $(this).attr('src');
+    $(this).attr('src',src+'?');
+    })
+
+    $('#register-form').submit(function(){
+    check_username();
+    check_password();
+    check_confirm();
+    check_phone();
+    check_email();
+    check_verify();
+    console.log(check_obj);
+    return check_obj.check();
+    })
+
+{% endblock js %}

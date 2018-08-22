@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% load order %}
+{% block css %}
+    {{ block.super }}
+{% endblock css %}
+{% block body %}
+
+    <!-- Content -->
+    <div id="content" class="flex col-md-10">
+        <div class="breadcrumbs">
+            <a href="/myAdmin/">首页</a>
+            &rsaquo; <a href="/myAdmin/{{ app_name }}/">{{ app_name|capfirst }}</a>
+            &rsaquo; 课程表
+        </div>
+
+        <h1>选择 {{ cls_name }} 来修改</h1>
+
+        <div id="content-main">
+            <ul class="object-tools">
+                <li>
+                    <a href="/admin/{{ app_name }}/{{ cls_name }}/add/" class="addlink">
+                        增加 {{ cls_name }}
+                    </a>
+                </li>
+
+
+            </ul>
+
+
+            <form id="changelist-form" method="post" novalidate>
+                {% csrf_token %}
+                <div class="actions">
+                    <label>动作 <select name="action" required>
+                        <option value="" selected>---------</option>
+                        <option value="delete_selected">删除所选的 {{ cls_verbose_name }}</option>
+                    </select></label><input type="hidden" name="select_across" value="0" class="select-across"/>
+                    <button type="submit" class="button" title="运行选中的动作" name="index" value="0">执行</button>
+                    <span class="action-counter">{{ conf_dict.list_display.info.data_count }} 个中 <span>0</span>个被选</span>
+                </div>
+
+                <div class="module">
+                    <table class="col-md-12">
+                        <thead>
+                        <tr>
+                            <th scope="col" class="check-all">
+                                <div class="text"><input type="checkbox" id="action-toggle"/></div>
+                            </th>
+                            {% for row in conf_dict.list_display.info.fields %}
+                                <th scope="col" class="sortable column-title">
+                                    <div class="text"><a
+                                            href="?order={{ forloop.counter }}">{{ row.field_name }}</a></div>
+                                </th>
+                            {% endfor %}
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        {% for row_list in conf_dict.list_display.info.data_list %}
+                            <tr>
+                                {% for row in row_list %}
+                                    {% if forloop.counter0 == 0 %}
+                                        <td class="action-checkbox"><input type="checkbox" name="_selected_action"
+                                                                           value="{{ row }}"
+                                                                           class="action-select"/></td>
+                                    {% elif forloop.counter0 == 1 %}
+                                        <th class="field-title">
+                                            <a href="/admin/{{ app_name }}/{{ cls_name }}/change/">{{ row }}</a></th>
+                                    {% else %}
+                                        <td class="field-price">{{ row }}</td>
+                                    {% endif %}
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="paginator">
+                    {{ conf_dict.list_display.info.data_count }} {{ cls_verbose_name }}
+                </p>
+
+            </form>
+        </div>
+    </div>
+
+
+    {% if conf_dict.list_filter.status %}
+        <div class="module filtered col-md-2" id="changelist">
+
+        <div id="changelist-filter">
+            <h2>过滤器</h2>
+            {% for field,field_data in conf_dict.list_filter.info.items %}
+                <h3> 以 {{ field_data.field_name }}</h3>
+                <ul>
+                    <li class="selected">
+                        <a href="?{{ field_data.data_list.0 | get_single_key }}=全部">全部</a></li>
+                    {% for d in field_data.data_list %}
+                        {#                        {{ d }}#}
+                        {% for k,v in d.items %}
+                            <li><a href="?{{ k }}={{ v }}">{{ v }}</a></li>
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endblock body %}
+
+
+{% block js %}
+    {{ block.super }}
+{% endblock js %}
+
+

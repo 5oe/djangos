@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% load order %}
+{% load filter %}
+{% block css %}
+    {{ block.super }}
+{% endblock css %}
+{% block body %}
+
+    <!-- Content -->
+    <div id="content" class="flex col-md-10">
+        <div class="breadcrumbs">
+            <a href="/myAdmin/">首页</a>
+            &rsaquo; <a href="/myAdmin/{{ app_name }}/">{{ app_name|capfirst }}</a>
+            &rsaquo; 课程表
+        </div>
+
+        <h1>选择 {{ cls_name }} 来修改</h1>
+
+        {% if search_fields %}
+            <form method="get">
+                <div>
+                    <input type="text" size="40" name="q" value="{{ args.q }}" id="searchbar" autofocus="">
+                    <input type="submit" value="搜索">
+
+                    {% if data_list|length != data_total_num %}
+                        <span class="small quiet">{{ data_list | length }} 条结果。 (<a href="?">总共{{ data_total_num }}</a>)</span>{% endif %}
+                    <input type="hidden" name="order" value="{{ args.order }}">
+                    {% for k,v in args.filter.items %}
+                        <input type="hidden" name="{{ k }}" value="{{ v }}">
+                    {% endfor %}
+                </div>
+            </form>
+        {% endif %}
+
+        <div id="content-main">
+            <ul class="object-tools">
+                <li>
+                    <a href="/admin/{{ app_name }}/{{ cls_name }}/add/" class="addlink">
+                        增加 {{ cls_name }}
+                    </a>
+                </li>
+            </ul>
+
+
+            <form id="changelist-form" method="post" novalidate action="">
+                {% csrf_token %}
+                <div class="actions">
+                    <label>动作 <select name="action" required>
+                        <option value="" selected>---------</option>
+                        <option value="delete_selected">删除所选的 {{ cls_verbose_name }}</option>
+                    </select></label><input type="hidden" name="select_across" value="0" class="select-across"/>
+                    <button type="submit" class="button" title="运行选中的动作" name="index" value="0">执行</button>
+                    <span class="action-counter">{{ data_list|length }} 个中 <span>0</span>个被选</span>
+                </div>
+
+                <div class="module">
+                    <table class="col-md-12">
+                        <thead>
+                        <tr>
+                            <th scope="col" class="check-all">
+                                <div class="text"><input type="checkbox" id="action-toggle"/></div>
+                            </th>
+                            {% for fields in show_fields %}
+                                <th scope="col" class="sortable column-title">
+                                    <div class="text "><a
+                                            href="{% make_order_str forloop.counter args.order args.q args.filter %}">{{ fields }}</a>
+
+                                        {% invert_order_href forloop.counter args.order args.q args.filter %}
+                                        {% delete_order_href forloop.counter args.order args.q args.filter %}
+                                    </div>
+                                </th>
+                            {% endfor %}
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for datas in data_list %}
+                            <tr>
+                                {% for value in datas %}
+                                    {% if forloop.counter0 == 0 %}
+                                        <td class="action-checkbox"><input type="checkbox" value="{{ value }}"
+                                                                           name="id"></td>
+                                    {% elif forloop.counter0 == 1 %}
+                                        <th class="field-title">
+                                            <a href="/admin/{{ app_name }}/{{ cls_name }}/change/">{{ value }}</a></th>
+                                    {% else %}
+                                        <td>{{ value }}</td>
+                                    {% endif %}
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="paginator">
+                    {{ data_list|length }} {{ cls_verbose_name }}
+                </p>
+
+            </form>
+        </div>
+    </div>
+
+
+    {% if list_filter %}
+        <div class="module filtered col-md-2" id="changelist">
+        <div id="changelist-filter">
+            <h2>过滤器</h2>
+            {% for data_dict in list_filter %}
+                <h3> 以 {{ data_dict.field_verbose_name }}</h3>
+                <ul>
+                    <li class="selected">
+                        <a href="{% create_filter_str args.order args.q args.filter data_dict.field %}"
+                           {% if '' ==  args.filter|get_value:data_dict.field %}class="active"{% endif %}>全部</a></li>
+                    {% for value in data_dict.data_list %}
+                        <li>
+                            <a href="{% create_filter_str args.order args.q args.filter data_dict.field value %}"
+                               {% if value|to_string ==  args.filter|get_value:data_dict.field %}class="active"{% endif %}>{{ value }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        </div>
+    {% endif %}
+    {#    {% test app_name 1 2 3 %}#}
+{% endblock body %}
+
+
+{% block js %}
+    {{ block.super }}
+{% endblock js %}
+

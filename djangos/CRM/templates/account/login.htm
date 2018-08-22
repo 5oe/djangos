@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="https://v3.bootcss.com/favicon.ico">
+
+    <title>{{ title }}</title>
+
+    <link href="{% static 'plugin/bootstrap-3.3.7-dist/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+    <script src="./Signin Template for Bootstrap_files/ie-emulation-modes-warning.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <form class="form-signin" novalidate method="post">
+        {% csrf_token %}
+        <h2 class="form-signin-heading">登录</h2>
+        <label for="username" class="sr-only">用户名</label>
+        <input type="text" id="username" class="form-control" placeholder="请输入用户名" name="username">
+        <label for="password" class="sr-only">密码</label>
+        <input type="password" id="password" class="form-control" placeholder="请输入密码" name="password">
+        <span class="msg">{{ error_msg }}</span>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" name="remember"> Remember me
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>
+
+</div> <!-- /container -->
+
+
+</body>
+</html>

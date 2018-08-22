@@ -1,0 +1,116 @@
+{%extends 'base.html'%}
+
+{% load static %}
+{% block body %}
+<div class="slide_con">
+    <div class="slider">
+        {% for obj in sliders%}
+        <div><a href="{{obj.href}}"><img src="/static/{{obj.img}}" alt="{{obj.title}}"></a></div>
+        {%endfor%}
+    </div>
+</div>
+
+
+<div class="notice_con clearfix">
+    <h1><span>&nbsp;</span>最新公告</h1>
+    {% for obj in notices%}
+    <div class="notice fl">
+        <h3><span>{{obj.title}}</span></h3>
+        <p>
+            {{obj.content | slice:"120"}} ...
+        </p>
+        <a href="">查看更多</a>
+    </div>
+    {% endfor %}
+</div>
+
+
+<div class="cls_con clearfix">
+    <h1><span>&nbsp;</span><a href="/stu/course_0_0_0">课程介绍</a></h1>
+    {% for obj in courses %}
+    <div class="cls fl">
+        <div class="cls_main">
+            <img src="/static/{{obj.img}}" alt="">
+            <h3>{{obj.title}}</h3>
+        </div>
+        <p>{{obj.content|slice:"20"}} ...</p>
+    </div>
+    {%endfor%}
+</div>
+
+
+<div class="sj_con clearfix">
+    <div class="sj_header clearfix">
+        <h1 class='fl'><span>&nbsp;</span>学员就业</h1>
+        <a href="/stu/job" class='fr'>More>></a>
+    </div>
+
+    <div class="info fl clearfix">
+        <div class="main_info fl">
+            <img src="/static/{{star_student.img}}" alt="">
+            <h4>{{star_student.salary}}元/月</h4>
+            <h4>{{star_student.company}}</h4>
+        </div>
+
+        <div class="detail_info fl">
+            <h3>{{star_student.name}}</h3>
+            <img src="images/i_13.png" alt="">
+            <p>{{star_thanks.content|slice:'120'}} ...</p>
+        </div>
+    </div>
+
+    <div class="job fr">
+        <h1>招聘信息</h1>
+        <ul>
+            {%for obj in recruits %}
+            <li>
+                <div class="job_info clearfix">
+                    <h3 class='fl'>{{obj.title}}</h3>
+                    <h3 class="fr">{{obj.salary}}元/月</h3>
+                </div>
+                {%endfor%}
+            </li>
+        </ul>
+    </div>
+
+    {%for obj in students%}
+    <div class="stu_info fl">
+        <img src="/static/{{obj.img}}" alt="">
+        <h4>{{obj.salary}}元/月</h4>
+        <h4>{{obj.company}}</h4>
+    </div>
+    {%endfor%}
+</div>
+
+<div class="life_con ">
+    <h1><span>&nbsp;</span>校园生活</h1>
+    {% for obj in lifes%}
+    <div class="life fl">
+        <div><a href=""><img src="/static/{{obj.img}}" alt="{{obj.title}}"/></a></div>
+    </div>
+    {%endfor%}
+</div>
+
+
+<div class="empire_con ">
+    <h1><span>&nbsp;</span>合作企业</h1>
+    {% for obj in enterprises%}
+    <div class="empire fl">
+        <div><a href="{{obj.href}}"><img src="/static/{{obj.img}}" alt="{{obj.title}}"/></a></div>
+    </div>
+    {%endfor%}
+</div>
+
+
+{% endblock body %}
+
+{% block js%}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.slider').bxSlider();
+    });
+</script>
+{% endblock js%}
