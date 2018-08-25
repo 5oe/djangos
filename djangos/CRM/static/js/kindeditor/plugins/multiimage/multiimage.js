@@ -1276,7 +1276,7 @@ SWFUpload.Console.writeLine = function (message) {
 
 		console.scrollTop = console.scrollHeight - console.clientHeight;
 	} catch (ex) {
-		alert("Exception: " + ex.name + " Message: " + ex.message);
+		alert("exception: " + ex.name + " Message: " + ex.message);
 	}
 };
 

@@ -1,3 +1,5 @@
+import string
+
 FAMILY_NAME_LIST = ['曹', '赵', '关', '张', '赵', '刘', '诸葛', '司马', '郑', '韩',
                     '孙', '吴', '陈', '郭', '崔', '钟', '吕', '贾', '杨', '邓']
 
@@ -37,6 +39,8 @@ NAME_WORD = '''
 红英吉森海莹吉月浩思璞瑜俊慧建业帅红铭晨曦哲春
 兰凌春文乐贶宁美偲嘉玉桐霏清心路遥亚楠慧美弓仑
 '''
+
+PASSWORD_WORD = string.ascii_letters + string.digits
 
 CHAR_FIELD_WORD = '''
 　第四封：现在就去做
@@ -131,4 +135,17 @@ EMAIL_POSTFIX = [
     '@sogou.com',
 ]
 
+DATE_FILED_RANGE = {
+    'year': (2015, 2018),
+    'month': (1, 12),
+    'day': (1, 21),
+}
 
+DATETIME_FILED_RANGE = {
+    'year': (2015, 2018),
+    'month': (1, 12),
+    'day': (1, 21),
+    'hour': (1, 23),
+    'minute': (20, 50),
+    'second': (1, 14),
+}

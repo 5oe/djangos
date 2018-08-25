@@ -20,13 +20,18 @@ class Site(object):
         self.app_to_admin.setdefault(app_name, [])
         self.app_to_admin[app_name].append(m)
 
-    def get_all_cls_detail(self):
+    def get_all_app_cls(self):
         ret = {}
         for app_name in self.app_to_admin:
-            ret[app_name] = self.get_detail_cls_list(app_name)
+            ret[app_name] = self.get_app_cls_list(app_name)
         return ret
 
-    def get_detail_cls_list(self, app_name):
+    def get_app_cls(self, app_name):
+        cls_list = self.get_app_cls_list(app_name)
+        info = {app_name: cls_list}
+        return info
+
+    def get_app_cls_list(self, app_name):
         cls_info_list = self.get_cls_info_list(app_name)
         l = [get_cls_detail(cls_info) for cls_info in cls_info_list]
         return l

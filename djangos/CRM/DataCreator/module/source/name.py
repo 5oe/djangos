@@ -24,3 +24,9 @@ def create_old_name():
     name_list = get_setting('NAME_LIST')
     if pr and is_hit_pr(pr):
         return get_lucky_one(name_list)
+
+
+if __name__ == '__main__':
+    for i in range(10):
+        print(create_new_name())
+

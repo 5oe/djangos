@@ -5,13 +5,21 @@ import copy
 
 register = template.Library()
 
+'''
+{% make_order_str forloop.counter args.order args.q args.filter %}
+'''
+
 
 @register.simple_tag
-def make_order_str(index, order_arg, q, kwargs):
-    if order_arg == '':
+def make_order_str(index, args_dict):
+    order = args_dict['order']
+    q = args_dict['q']
+    filter_dict = args_dict['filter']
+
+    if order == '':
         order_list = []
     else:
-        order_list = order_arg.split('.')
+        order_list = order.split('.')
 
     value = get_arg_value(index, order_list)
     if value is not None:
@@ -20,7 +28,7 @@ def make_order_str(index, order_arg, q, kwargs):
 
     order_list.insert(0, str(index))
 
-    d = copy.deepcopy(kwargs)
+    d = copy.deepcopy(filter_dict)
     order_str = 'order=' + '.'.join(order_list)
     q_str = 'q=%s' % q
     filter_str = parse_filter_kwargs(d)
@@ -28,10 +36,16 @@ def make_order_str(index, order_arg, q, kwargs):
     return '?' + '&'.join([order_str, q_str, filter_str])
 
 
+# {% invert_order_href forloop.counter args.order args.q args.filter %}
+
 # simple_tag开始
 @register.simple_tag
-def invert_order_href(index, order_arg, q, kwargs):
-    order_list = order_arg.split('.')
+def invert_order_href(index, args_dict):
+    order = args_dict['order']
+    q = args_dict['q']
+    filter_dict = args_dict['filter']
+
+    order_list = order.split('.')
     index = get_arg_index(index, order_list)
 
     if index is None:
@@ -40,7 +54,7 @@ def invert_order_href(index, order_arg, q, kwargs):
         i = int(order_list[index])
         order_list[index] = str(-i)
         order_str = '.'.join(order_list)
-        filter_str = parse_filter_kwargs(kwargs)
+        filter_str = parse_filter_kwargs(filter_dict)
         html_href = '''
         <a class =
         "glyphicon glyphicon-sort" 
@@ -50,15 +64,21 @@ def invert_order_href(index, order_arg, q, kwargs):
         return mark_safe(html_href)
 
 
+# {% delete_order_href forloop.counter args.order args.q args.filter %}
+
 @register.simple_tag
-def delete_order_href(index, order_arg, q, kwargs):
-    order_list = order_arg.split('.')
+def delete_order_href(index, args_dict):
+    order = args_dict['order']
+    q = args_dict['q']
+    filter_dict = args_dict['filter']
+
+    order_list = order.split('.')
     value = get_arg_value(index, order_list)
 
     if value is not None:
         order_list.remove(value)
         order_str = '.'.join(order_list)
-        filter_str = parse_filter_kwargs(kwargs)
+        filter_str = parse_filter_kwargs(filter_dict)
         html_href = '''
         <a class =
         "glyphicon glyphicon-scissors" 

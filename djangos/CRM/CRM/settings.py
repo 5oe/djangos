@@ -68,7 +68,7 @@ TEMPLATES = [
 
             'libraries': {
                 'order_tags': 'myAdmin.templatetags.order',
-                'query_tags': 'myAdmin.templatetags.query',
+                'display_tags': 'myAdmin.templatetags.display',
                 'filter_tags': 'myAdmin.templatetags.filter',
             },
         },

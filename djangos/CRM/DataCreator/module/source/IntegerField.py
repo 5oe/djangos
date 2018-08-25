@@ -5,6 +5,11 @@ from DataCreator.libs.setting import get_setting
 from DataCreator.libs.random import get_lucky_one, is_hit_pr
 
 
+def create_choice_int(choices):
+    int_list = [row[0] for row in choices]
+    return random.choice(int_list)
+
+
 def create_new_int():
     int_range = source_setting.INTEGER_RANGE
     return random.randint(*int_range)

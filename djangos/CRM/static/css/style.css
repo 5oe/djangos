@@ -184,12 +184,12 @@ ol, ul, li {
 }
 
 .module table td {
-    white-space: nowrap;
 }
 
 .module table td a {
     display: block;
     padding-right: .6em;
+    white-space: nowrap;
 }
 
 /* RECENT ACTIONS MODULE */
@@ -439,7 +439,6 @@ div.help ul {
 }
 
 .nowrap {
-    white-space: nowrap;
 }
 
 /* TABLES */
@@ -715,13 +714,11 @@ input[type=button][disabled].default {
 
 .module tbody th {
     font-size: 15px;
-    height: 30px;
     line-height: 30px;
 }
 
 .module a, td {
     font-size: 15px;
-    line-height: 30px;
 }
 
 .module h2, .inline-group h2 {
@@ -972,6 +969,7 @@ table#change-history tbody th {
     position: relative;
     width: 100%;
     min-width: 980px;
+
     padding: 0;
 }
 
@@ -1001,7 +999,6 @@ table#change-history tbody th {
 
 td {
     overflow: hidden;
-    white-space: nowrap;
     text-overflow: ellipsis;
 }
 
@@ -1016,4 +1013,30 @@ table thead th .text a {
 
 .active:link, .active:visited {
     color: red;
+}
+
+.content-container table td {
+    /*display: inline-block;*/
+    /*text-align: center;*/
+    /*max-height: 400px;*/
+    /*float: right;*/
+}
+
+.content-container table th {
+    /*display: inline-block;*/
+    max-width: 250px;
+    min-width: 30px;
+    /*text-align: center;*/
+    padding: 5px;
+
+}
+
+/*表格td里面嵌套一个div,然后设定最大高度,最大宽度，内容自动换行*/
+.in {
+    /*text-align: center;*/
+    /*max-height: 300px;*/
+    min-width: 30px;
+    max-width: 250px;
+    word-wrap: break-word;
+    margin: 5px 0;
 }

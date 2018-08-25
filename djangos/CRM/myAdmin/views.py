@@ -5,7 +5,7 @@ from myAdmin import site
 
 site.import_admin()
 
-from form.myAdmin.cls_index import ArgsForm
+from form.myAdmin.cls_index import AppArgsForm, AppClsArgsForm
 from libs.format import pack_base_info, get_cls_index_dict
 
 
@@ -16,12 +16,22 @@ def backend(request):
 
 
 def index(request):
-    info = site.get_all_cls_detail()
+    info = site.get_all_app_cls()
     return render(request, 'myAdmin/index2.html', {'info': info, 'title': '站点管理'})
 
 
+def app_index(request, **kwargs):
+    form = AppArgsForm(kwargs)
+    if form.is_valid():
+        app_name = form.cleaned_data['app']
+        info = site.get_app_cls(app_name)
+        return render(request, 'myAdmin/index2.html', {'info': info, 'title': app_name})
+    else:
+        raise Http404('你所访问的页面不存在')
+
+
 def cls_index(request, **kwargs):
-    form = ArgsForm(kwargs)
+    form = AppClsArgsForm(kwargs)
     if form.is_valid():
         app_name = form.cleaned_data['app']
         cls_name = form.cleaned_data['cls']
@@ -31,7 +41,6 @@ def cls_index(request, **kwargs):
         from view_model.myAdmin.cls_index import ClsIndexViewModel
         context = ClsIndexViewModel.cls_index_context(model_admin, args_dict)
         context.update(pack_base_info(request, app_name, cls_name, ))
-
         return render(request, 'myAdmin/cls_index2.html', context)
     else:
         raise Http404("你所访问的页面不存在")
@@ -47,15 +56,15 @@ def student(request):
     pass
 
 
-def answer(request):
+def news(request):
     pass
 
 
-def question(request):
+def admin(request):
     pass
 
 
-def enroll(request):
+def boss(request):
     pass
 
 

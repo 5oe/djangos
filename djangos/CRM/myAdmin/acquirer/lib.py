@@ -17,8 +17,14 @@ def get_field_verbose_name(cls_info, field):
     return cls_info._meta.get_field(field).verbose_name
 
 
+def get_filter_dict(filter_dict):
+    ret = {}
+    for k, v in filter_dict.items():
+        if v:
+            ret[k] = v
+    return ret
+
+
 def format_values_list(value_list):
     # 'value_list': < QuerySet[(4,), (2,), (1,), (3,), (5,)] >
     return [row[0] for row in value_list]
-
-

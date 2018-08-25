@@ -4,7 +4,7 @@ from .models import *
 
 class CourseInfoAdmin(admin.ModelAdmin):
     list_display = ['title', 'price', 'outline', 'cyc']
-    list_filter = ['title', 'price', 'cyc']
+    list_filter = ['title', 'price', 'cyc', 'outline']
     search_fields = ['title', 'price', 'cyc']
 
 

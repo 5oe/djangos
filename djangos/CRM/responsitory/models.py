@@ -113,7 +113,7 @@ class AnswerInfo(models.Model):
         verbose_name_plural = '回答表'
 
     def __str__(self):
-        return '%s 回答 %s' % (self.handler.username, self.question.title)
+        return '%s 回答 %s' % (self.handler.user.username, self.question.title)
 
 
 class ScoreInfo(models.Model):

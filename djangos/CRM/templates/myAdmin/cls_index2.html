@@ -63,10 +63,10 @@
                             {% for fields in show_fields %}
                                 <th scope="col" class="sortable column-title">
                                     <div class="text "><a
-                                            href="{% make_order_str forloop.counter args.order args.q args.filter %}">{{ fields }}</a>
+                                            href="{% make_order_str forloop.counter args %}">{{ fields }}</a>
 
-                                        {% invert_order_href forloop.counter args.order args.q args.filter %}
-                                        {% delete_order_href forloop.counter args.order args.q args.filter %}
+                                        {% invert_order_href forloop.counter args %}
+                                        {% delete_order_href forloop.counter args %}
                                     </div>
                                 </th>
                             {% endfor %}
@@ -83,7 +83,9 @@
                                         <th class="field-title">
                                             <a href="/admin/{{ app_name }}/{{ cls_name }}/change/">{{ value }}</a></th>
                                     {% else %}
-                                        <td>{{ value }}</td>
+                                        <td>
+                                            <div class="in">{{ value }}</div>
+                                        </td>
                                     {% endif %}
                                 {% endfor %}
                             </tr>
@@ -109,11 +111,11 @@
                 <h3> 以 {{ data_dict.field_verbose_name }}</h3>
                 <ul>
                     <li class="selected">
-                        <a href="{% create_filter_str args.order args.q args.filter data_dict.field %}"
+                        <a href="{% create_filter_str data_dict.field args %}"
                            {% if '' ==  args.filter|get_value:data_dict.field %}class="active"{% endif %}>全部</a></li>
                     {% for value in data_dict.data_list %}
                         <li>
-                            <a href="{% create_filter_str args.order args.q args.filter data_dict.field value %}"
+                            <a href="{% create_filter_str data_dict.field args value %}"
                                {% if value|to_string ==  args.filter|get_value:data_dict.field %}class="active"{% endif %}>{{ value }}</a>
                         </li>
                     {% endfor %}
