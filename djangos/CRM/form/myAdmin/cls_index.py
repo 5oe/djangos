@@ -33,3 +33,19 @@ class AppClsArgsForm(AppArgsForm):
             return self.cleaned_data['cls']
         else:
             raise ValidationError('cls不存在')
+
+
+class AppClsObjArgsForm(AppClsArgsForm):
+    id = fields.CharField()
+
+    def clean_id(self):
+        app = self.cleaned_data.get('app')
+        cls = self.cleaned_data.get('cls')
+        id = self.cleaned_data.get('id')
+        cls_info = site.get_model(app_name=app, cls_name=cls)
+        try:
+            cls_info.objects.get(id=int(id))
+        except cls_info.DoesNotExist:
+            raise ValidationError('对象不存在')
+
+        return self.cleaned_data['id']

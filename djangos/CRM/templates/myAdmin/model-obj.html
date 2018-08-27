@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load order %}
+{% load filter %}
+{% load display %}
+{% block css %}
+    {{ block.super }}
+{% endblock css %}
+{% block body %}
+    <form action="">
+
+        {% for field in form %}
+            <div class="form-row">
+                <div>
+                    <label class="field-label" for="id_status">{{ field.label }}:</label>
+                    {{ field }}
+
+                    <img src="/static/admin/img/icon-addlink.svg" alt="增加">
+                    <img src="/static/admin/img/icon-changelink.svg" alt="修改">
+                </div>
+            </div>
+        {% endfor %}
+
+        <div class="submit-row">
+            <a href="/admin/responsitory/customerinfo/101/delete/" class="pull-left btn-delete btn-danger">删除</a>
+            <input type="submit" value="保存" class="default pull-right btn" name="_save"/>
+            <input type="submit" class="pull-right btn" value="保存并增加另一个" name="_addanother"/>
+            <input type="submit" class="pull-right btn" value="保存并继续编辑" name="_continue"/>
+        </div>
+    </form>
+{% endblock body %}
+
+
+{% block js %}
+    {{ block.super }}
+{% endblock js %}
+

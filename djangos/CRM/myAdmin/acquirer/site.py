@@ -2,7 +2,6 @@ from django.db import models
 from django.conf import settings
 import importlib
 from myAdmin.acquirer.modelAdmin import ModelAdmin
-from myAdmin.acquirer.lib import get_cls_detail
 
 
 # 职责：获得所有注册的类，放在一个列表里
@@ -20,23 +19,19 @@ class Site(object):
         self.app_to_admin.setdefault(app_name, [])
         self.app_to_admin[app_name].append(m)
 
-    def get_all_app_cls(self):
+    def get_total_cls(self):
         ret = {}
         for app_name in self.app_to_admin:
-            ret[app_name] = self.get_app_cls_list(app_name)
+            ret[app_name] = self.get_cls_list(app_name)
         return ret
 
-    def get_app_cls(self, app_name):
-        cls_list = self.get_app_cls_list(app_name)
-        info = {app_name: cls_list}
-        return info
-
-    def get_app_cls_list(self, app_name):
-        cls_info_list = self.get_cls_info_list(app_name)
-        l = [get_cls_detail(cls_info) for cls_info in cls_info_list]
+    def get_cls_list(self, app_name):
+        admin_list = self.app_to_admin[app_name]
+        print(admin_list)
+        l = [admin.cls_detail for admin in admin_list]
         return l
 
-    def get_cls_info_list(self, app_name):
+    def get_model_list(self, app_name):
         admin_list = self.app_to_admin.get(app_name)
         ret = []
         for admin in admin_list:
@@ -45,7 +40,7 @@ class Site(object):
             ret.append(cls_info)
         return ret
 
-    def get_cls_info(self, app_name, cls_name):
+    def get_model(self, app_name, cls_name):
         admin_list = self.app_to_admin.get(app_name, [])
         for admin in admin_list:
             if not hasattr(admin, 'ClsInfo'): continue
@@ -53,7 +48,7 @@ class Site(object):
             if cls_info.__name__ == cls_name:
                 return cls_info
 
-    def model_admin(self, app_name, cls_name):
+    def get_admin(self, app_name, cls_name):
         admin_list = self.app_to_admin.get(app_name, [])
         for admin in admin_list:
             if not hasattr(admin, 'ClsInfo'): continue
@@ -74,4 +69,4 @@ class Site(object):
         return True if app in self.app_to_admin else False
 
     def is_cls_in_register(self, app_name, cls_name):
-        return True if self.get_cls_info(app_name, cls_name) else False
+        return True if self.get_model(app_name, cls_name) else False

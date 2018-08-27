@@ -1040,3 +1040,64 @@ table thead th .text a {
     word-wrap: break-word;
     margin: 5px 0;
 }
+
+.submit-row {
+    padding: 12px 14px;
+    margin: 0 0 20px;
+    background: #f8f8f8;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    text-align: right;
+    overflow: hidden;
+}
+
+.btn {
+    margin-right: 10px;
+    padding: 10px 15px;
+    color: #fff;
+    line-height: 15px;
+    border-radius: 4px;
+}
+
+.btn-delete {
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.btn-delete:link, .btn-delete:visited {
+    color: white;
+}
+
+.form-row {
+    overflow: hidden;
+    padding: 10px;
+    font-size: 13px;
+    border-bottom: 1px solid #eee;
+    vertical-align:middle;
+}
+
+.form-row img, .form-row input {
+    vertical-align: middle;
+}
+
+.form-row label input[type="checkbox"] {
+    margin-top: 0;
+    vertical-align: 0;
+}
+
+form .form-row p {
+    padding-left: 0;
+}
+
+
+.field-label {
+    display: block;
+    padding: 4px 10px 0 0;
+    float: left;
+    width: 160px;
+    word-wrap: break-word;
+    line-height: 1;
+}

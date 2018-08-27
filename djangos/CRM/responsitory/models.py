@@ -141,7 +141,6 @@ class ScoreInfo(models.Model):
 
 class ClsInfo(models.Model):
     cls_type_choices = [(0, '脱产'), (1, '周末'), (2, '网络班')]
-
     title = models.CharField(max_length=40, verbose_name='班级名', null=True, blank=True)
     course = models.ForeignKey('CourseInfo', verbose_name='所学课程')
     school = models.ForeignKey('SchoolInfo', verbose_name='所属校区')

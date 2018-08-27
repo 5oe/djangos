@@ -5,8 +5,8 @@ from myAdmin import site
 
 site.import_admin()
 
-from form.myAdmin.cls_index import AppArgsForm, AppClsArgsForm
-from libs.format import pack_base_info, get_cls_index_dict
+from form.myAdmin.cls_index import AppArgsForm, AppClsArgsForm, AppClsObjArgsForm
+from form.myAdmin.model_obj import FormClassFactory
 
 
 # Create your views here.
@@ -16,7 +16,7 @@ def backend(request):
 
 
 def index(request):
-    info = site.get_all_app_cls()
+    info = site.get_total_cls()
     return render(request, 'myAdmin/index2.html', {'info': info, 'title': '站点管理'})
 
 
@@ -35,15 +35,44 @@ def cls_index(request, **kwargs):
     if form.is_valid():
         app_name = form.cleaned_data['app']
         cls_name = form.cleaned_data['cls']
-        model_admin = site.model_admin(app_name, cls_name)
-        args_dict = get_cls_index_dict(request)
+        model_admin = site.get_admin(app_name, cls_name)
 
         from view_model.myAdmin.cls_index import ClsIndexViewModel
-        context = ClsIndexViewModel.cls_index_context(model_admin, args_dict)
-        context.update(pack_base_info(request, app_name, cls_name, ))
+        view_model = ClsIndexViewModel(request, model_admin)
+        context = view_model.get_context(request, **{'title': cls_name, 'app_name': app_name, 'cls_name': cls_name})
         return render(request, 'myAdmin/cls_index2.html', context)
     else:
         raise Http404("你所访问的页面不存在")
+
+
+def model_obj(request, **kwargs):
+    form = AppClsObjArgsForm(kwargs)
+    if form.is_valid():
+        app_name = form.cleaned_data['app']
+        cls_name = form.cleaned_data['cls']
+        id = form.cleaned_data['id']
+        model_admin = site.get_admin(app_name=app_name, cls_name=cls_name)
+        model_obj = model_admin.cls_info.objects.get(id=int(id))
+        form_cls = FormClassFactory.from_admin(model_admin)
+        form = form_cls(instance=model_obj)
+        context = {'form': form}
+        return render(request, 'myAdmin/model-obj.html', context)
+    else:
+        raise Http404('你所访问的页面不存在')
+
+
+def add_model_obj(request, **kwargs):
+    form = AppClsArgsForm(kwargs)
+    if form.is_valid():
+        app_name = form.cleaned_data['app']
+        cls_name = form.cleaned_data['cls']
+        model_admin = site.get_admin(app_name=app_name, cls_name=cls_name)
+        form_cls = FormClassFactory.from_admin(model_admin)
+        form = form_cls()
+        context = {'form': form}
+        return render(request, 'myAdmin/model-obj.html', context)
+    else:
+        raise Http404('你所访问的页面不存在')
 
 
 def teacher(request):

@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load order %}
 {% load filter %}
+{% load display %}
 {% block css %}
     {{ block.super }}
 {% endblock css %}
@@ -35,7 +36,7 @@
         <div id="content-main">
             <ul class="object-tools">
                 <li>
-                    <a href="/admin/{{ app_name }}/{{ cls_name }}/add/" class="addlink">
+                    <a href="/myAdmin/{{ app_name }}/{{ cls_name }}/add/" class="addlink">
                         增加 {{ cls_name }}
                     </a>
                 </li>
@@ -73,18 +74,21 @@
                         </tr>
                         </thead>
                         <tbody>
-                        {% for datas in data_list %}
+
+                        {% for config_dict in data_list %}
                             <tr>
-                                {% for value in datas %}
+                                {% for field,value_dict in config_dict.items %}
                                     {% if forloop.counter0 == 0 %}
-                                        <td class="action-checkbox"><input type="checkbox" value="{{ value }}"
+                                        <td class="action-checkbox"><input type="checkbox"
+                                                                           value="{{ value_dict | display }}"
                                                                            name="id"></td>
                                     {% elif forloop.counter0 == 1 %}
                                         <th class="field-title">
-                                            <a href="/admin/{{ app_name }}/{{ cls_name }}/change/">{{ value }}</a></th>
+                                            <a href="/myAdmin/{{ app_name }}/{{ cls_name }}/change/{{ config_dict | get_id }}">{{ value_dict | display }}</a>
+                                        </th>
                                     {% else %}
                                         <td>
-                                            <div class="in">{{ value }}</div>
+                                            <div class="in">{{ value_dict | display }}</div>
                                         </td>
                                     {% endif %}
                                 {% endfor %}
@@ -107,16 +111,17 @@
         <div class="module filtered col-md-2" id="changelist">
         <div id="changelist-filter">
             <h2>过滤器</h2>
-            {% for data_dict in list_filter %}
-                <h3> 以 {{ data_dict.field_verbose_name }}</h3>
+            {#            {{ list_filter }}#}
+            {% for config_dict in list_filter %}
+                <h3> 以 {{ config_dict.field_verbose_name }}</h3>
                 <ul>
                     <li class="selected">
-                        <a href="{% create_filter_str data_dict.field args %}"
-                           {% if '' ==  args.filter|get_value:data_dict.field %}class="active"{% endif %}>全部</a></li>
-                    {% for value in data_dict.data_list %}
+                        <a href="{% create_filter_str config_dict.field args %}"
+                           {% if '' ==  args.filter|get_value:config_dict.field %}class="active"{% endif %}>全部</a></li>
+                    {% for value_dict in config_dict.data_list %}
                         <li>
-                            <a href="{% create_filter_str data_dict.field args value %}"
-                               {% if value|to_string ==  args.filter|get_value:data_dict.field %}class="active"{% endif %}>{{ value }}</a>
+                            <a href="{% create_filter_str config_dict.field args value_dict.value %}"
+                               {% if value_dict.value|to_string ==  args.filter|get_value:config_dict.field %}class="active"{% endif %}>{{ value_dict | display }}</a>
                         </li>
                     {% endfor %}
                 </ul>
