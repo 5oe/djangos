@@ -1,7 +1,2 @@
-#!/usr/bin/env python
-# coding=utf-8
 
-fdfdsfdsa
-ofdsfds 
-fsdao
-fdfsd
+for i  in fds
