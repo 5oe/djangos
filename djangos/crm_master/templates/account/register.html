@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div id="container" class="cls-container">
+        <div id="bg-overlay" class="bg-img img-balloon"></div>
+        <div class="cls-header cls-header-lg">
+            <div class="cls-brand">
+                <a class="box-inline" href="../index.html">
+                    {#                    <img alt="Nifty Admin" src="img/logo.png" class="brand-icon">#}
+                    <span class="brand-title">CRM <span class="text-thin">master</span></span>
+                </a>
+            </div>
+        </div>
+
+        <div class="cls-content">
+            <div class="cls-content-sm panel">
+                <div class="panel-body">
+                    <p class="pad-btm">注册</p>
+                    <form method="post" novalidate>{% csrf_token %}
+                        {% for field in form %}
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">{{ field.label }}</div>
+                                    {{ field }}
+                                </div>
+                                <span style="color: red">{{ field.errors.0 }}</span>
+                            </div>
+
+
+
+                        {% endfor %}
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input style="height: 40px" type="text" name="verify_code" class="form-control"
+                                       placeholder="验证码">
+                                <div class="input-group-addon verify-code-container">
+                                    <img src="/account/create_verify_code" alt="验证码" height="40px" width="90px"
+                                         class="verify-code">
+                                </div>
+                            </div>
+                            <span style="color: red">{{ form.non_field_errors }}</span>
+                        </div>
+
+
+                        <div class="form-group text-right">
+                            <button class="btn btn-success form-control" type="submit">注册</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="pad-ver">
+                <a href="/account/login/" class="btn-link mar-lft">已有账号？ 登录</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+    {{ block.super }}
+    <script>
+        $('.verify-code').click(function () {
+            this.src = this.src + '?';
+        })
+    </script>
+{% endblock js %}

@@ -1,0 +1,16 @@
+{% extends 'general_admin/base.html' %}
+{% block css %}
+    {{ block.super }}
+{% endblock css %}
+
+{% block body %}
+    <button onclick="calldad()"> child</button>
+{% endblock body %}
+{% block js %}
+    {{ block.super }}
+    <script>
+        function calldad() {
+            window.opener.test();
+        }
+    </script>
+{% endblock js %}

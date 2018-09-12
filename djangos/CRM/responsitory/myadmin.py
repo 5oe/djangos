@@ -27,6 +27,23 @@ class CustomerInfoAdmin(ModelAdmin):
 
     readonly_fields = ['time', 'contact', 'consultant', 'status']
 
+    # 定制Action行为具体方法
+    def change_status(self, request, queryset):
+        print('全部改为报名')
+        row = queryset.update(status=1)
+        print('改报名成功情况', row)
+
+    change_status.short_description = "全部改为报名"
+    actions = [change_status, ]
+
+
+class ClsInfoAdmin(ModelAdmin):
+    list_display = ['title', 'course', 'school', 'semester', 'start_date', 'graduate_date', 'type']
+    search_fields = ['title', 'course', 'school', 'semester', 'start_date', 'graduate_date', 'type']
+    list_filter = ['title', 'course', 'school']
+    readonly_fields = ['title', 'course', 'school']
+    filter_horizontal = ['teachers']
+
 
 # Register your models here.
 admin.site.register(UserInfo)
@@ -38,3 +55,5 @@ admin.site.register(ScoreInfo, ScoreInfoAdmin)
 admin.site.register(QuestionInfo)
 admin.site.register(CourseInfo, CourseInfoAdmin)
 admin.site.register(LectureInfo)
+admin.site.register(ClsInfo, ClsInfoAdmin)
+admin.site.register(CustomerFollowUpInfo)

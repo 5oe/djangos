@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div id="container" class="cls-container">
+        <div id="bg-overlay" class="bg-img img-balloon"></div>
+        <div class="cls-header cls-header-lg">
+            <div class="cls-brand">
+                <a class="box-inline" href="../index.html">
+                    {#                    <img alt="Nifty Admin" src="img/logo.png" class="brand-icon">#}
+                    <span class="brand-title">CRM <span class="text-thin">master</span></span>
+                </a>
+            </div>
+        </div>
+
+        <div class="cls-content">
+            <div class="cls-content-sm panel">
+                <div class="panel-body">
+                    <p class="pad-btm">登录</p>
+                    <form method="post">{% csrf_token %}
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                                <input type="text" name="username" class="form-control" placeholder="请输入登录邮箱">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-asterisk"></i></div>
+                                <input type="password" name="password" class="form-control" placeholder="请输入密码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input style="height: 40px" type="text" name="verify_code" class="form-control"
+                                       placeholder="验证码">
+                                <div class="input-group-addon verify-code-container">
+                                    <img src="/account/create_verify_code" alt="验证码" height="40px" width="90px"
+                                         class="verify-code">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-8 text-left checkbox">
+                                <label class="form-checkbox form-icon">
+                                    <input type="checkbox" name="remember"> 30天内自动登录
+                                </label>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="form-group text-right">
+                                    <button class="btn btn-success text-uppercase" type="submit">登录</button>
+                                </div>
+                            </div>
+                        </div>
+                        <span style="color: red">{{ error_msg }}</span>
+                    </form>
+                </div>
+            </div>
+            <div class="pad-ver">
+                <a href="/account/reminder" class="btn-link mar-rgt">忘记密码 ?</a>
+                <a href="/account/register" class="btn-link mar-lft">注册</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+    {{ block.super }}
+    <script>
+        $('.verify-code').click(function () {
+            this.src = this.src + '?';
+        })
+    </script>
+{% endblock js %}

@@ -1,0 +1,15 @@
+{% extends 'myAdmin/model-del.html' %}
+
+{% block del_form %}
+    <form method="post" action="/myAdmin/{{ app_name }}/{{ cls_name }}/delete_collection/">
+        {% csrf_token %}
+        <div>
+            {% for id in id_list %}
+                <input type="hidden" name="id" value="{{ id }}"/>
+            {% endfor %}
+            <input type="submit" value="是的，我确定">
+            <a href="/myAdmin/{{ app_name }}/{{ cls_name }}/"
+               class="button cancel-link">不，返回</a>
+        </div>
+    </form>
+{% endblock del_form %}

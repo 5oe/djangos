@@ -6,25 +6,123 @@
     {{ block.super }}
 {% endblock css %}
 {% block body %}
-    <form action="">
+    <div class="breadcrumbs">
+        <a href="/myAdmin/">首页</a>
+        &rsaquo; <a href="/myAdmin/{{ app_name }}/">{{ app_name|capfirst }}</a>
+        &rsaquo; <a href="/myAdmin/{{ app_name }}/{{ cls_name }}">{{ cls_verbose_name }}</a>
+        &rsaquo; {{ model_obj }}
+    </div>
 
+    <div class='page-header'>
+        <h3>{% if add %}增加{% else %}修改{% endif %}  {{ cls_real_name }}</h3>
+    </div>
+
+
+    <form method="post" novalidate onsubmit="SetOptSelected()">
+        {% csrf_token %}
         {% for field in form %}
             <div class="form-row">
-                <div>
-                    <label class="field-label" for="id_status">{{ field.label }}:</label>
+                <label class="field-label" for="id_{{ field.name }}">{{ field.label }}:</label>
+                {% if field.name in filter_horizontal %}
+                    {% get_value filter_horizontal_config field.name as config %}
+                    <div class="col-md-4 sel">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">@</span>
+                            <input type="text" oninput="FilterSearch(this,'id_{{ field.name }}_unchecked')"
+                                   class="form-control" placeholder="过滤">
+                        </div>
+
+                        <select id="id_{{ field.name }}_unchecked" multiple class="_unchecked form-control">
+                            {% for obj in  config.unchecked %}
+                                <option ondblclick="MoveOpt(this,'id_{{ field.name }}')"
+                                        value="{{ obj.id }}">{{ obj }}</option>
+                            {% endfor %}
+                        </select>
+                        <p class="add_all">
+                            <a href="javascript:;"
+                               onclick="MoveAllOpt('id_{{ field.name }}_unchecked','id_{{ field.name }}')"
+                               class="selector-chooseall "><span class="glyphicon glyphicon-share-alt"
+                                                                 aria-hidden="true"></span> 全选</a>
+                        </p>
+                        <div class="help">按住 ”Control“，或者Mac上的 “Command”，可以选择多个。</div>
+                    </div>
+                    <div class="col-md-1 sign-container">
+                        <div class="sign">
+                            <a href="javascript:;"
+                               onclick="MoveMutiOpt('id_{{ field.name }}','id_{{ field.name }}_unchecked')">
+                                <span class="glyphicon glyphicon-arrow-left sign-link" aria-hidden="true"></span>
+                            </a>
+                            <br>
+                            <a href="javascript:;"
+                               onclick="MoveMutiOpt('id_{{ field.name }}_unchecked','id_{{ field.name }}')">
+                                <span class="glyphicon glyphicon-arrow-right sign-link" aria-hidden="true"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 sel">
+                        <div class="input-group">
+                            <span class="input-group-addon " id="basic-addon1">选中的 {{ field.label }}</span>
+
+                        </div>
+                        <select id="id_{{ field.name }}" multiple class="_checked form-control" name="{{ field.name }}">
+                            {% for obj in  config.checked %}
+                                <option ondblclick="MoveOpt(this,'id_{{ field.name }}_unchecked')"
+                                        value="{{ obj.id }}">{{ obj }}</option>
+                            {% endfor %}
+                        </select>
+
+
+                        <p class="remove_all">
+                            <a href="javascript:;"
+                               onclick="MoveAllOpt('id_{{ field.name }}','id_{{ field.name }}_unchecked')"
+                               class="selector-chooseall "><span class="glyphicon glyphicon-remove-sign"
+                                                                 aria-hidden="true"></span> 移除全部</a>
+                        </p>
+                    </div>
+
+                    <a onclick="window.open('/myAdmin/{% get_field_app_name cls field.name %}/{% get_field_cls_name cls field.name %}/add/',
+                            'newwindow', 'height=550, width=800, top=0, left=0, toolbar=no, ' +
+                            'menubar=no, scrollbars=no, resizable=no, location=no, status=no') "
+                    ><img src="/static/admin/img/icon-addlink.svg" alt="增加"></a>
+                {% else %}
+
                     {{ field }}
 
-                    <img src="/static/admin/img/icon-addlink.svg" alt="增加">
-                    <img src="/static/admin/img/icon-changelink.svg" alt="修改">
+
+                    {% if field|can_show_other_link %}
+
+                        <a onclick="window.open('/myAdmin/{{ app_name }}/{{ cls_name }}/change/{{ model_obj.id }}/',
+                                'newwindow', 'height=550, width=800, top=0, left=0, toolbar=no, ' +
+                                'menubar=no, scrollbars=no, resizable=no, location=no, status=no') "
+                        ><img src="/static/admin/img/icon-changelink.svg" alt="修改"></a>
+
+                        <a onclick="window.open('/myAdmin/{% get_field_app_name cls field.name %}/{% get_field_cls_name cls field.name %}/add/',
+                                'newwindow', 'height=550, width=800, top=0, left=0, toolbar=no, ' +
+                                'menubar=no, scrollbars=no, resizable=no, location=no, status=no') "
+                        ><img src="/static/admin/img/icon-addlink.svg" alt="增加"></a>
+                    {% endif %}
+                {% endif %}
+                <div class="error">{{ field.errors.0 }}</div>
+            </div>
+        {% endfor %}
+
+        {% for config in readonly_config_list %}
+            <div class="form-row">
+                <div>
+                    <label class="field-label" for="id_status">{{ config.label }}:</label>
+                    <div>{{ config.display }}</div>
                 </div>
             </div>
         {% endfor %}
 
+
         <div class="submit-row">
-            <a href="/admin/responsitory/customerinfo/101/delete/" class="pull-left btn-delete btn-danger">删除</a>
-            <input type="submit" value="保存" class="default pull-right btn" name="_save"/>
-            <input type="submit" class="pull-right btn" value="保存并增加另一个" name="_addanother"/>
-            <input type="submit" class="pull-right btn" value="保存并继续编辑" name="_continue"/>
+            {% if not add %}<a href="/myAdmin/{{ app_name }}/{{ cls_name }}/delete/{{ model_obj.id }}/"
+                               class="pull-left btn-delete btn-danger">删除</a>{% endif %}
+            <input type="submit" value="保存" class="default pull-right btn" name="save"/>
+            <input type="submit" class="pull-right btn" value="保存并增加另一个" name="add_another"/>
+            <input type="submit" class="pull-right btn" value="保存并继续编辑" name="continue"/>
         </div>
     </form>
 {% endblock body %}
@@ -32,5 +130,66 @@
 
 {% block js %}
     {{ block.super }}
+    <script type="text/javascript">
+
+        function MoveOpt(ths, target_id) {
+            // 将select opt元素 移动另外一个select去
+            //target_id 标志另外一个select的id
+
+            //获取select框的id
+            var selector_id = $(ths).parent().attr('id');
+            //创建元素
+            var option = document.createElement('option');
+            var event_func_str = "MoveOpt(this,'" + selector_id + "')";
+            $(option).attr("ondblclick", event_func_str);
+            var value = $(ths).attr('value');
+            $(option).attr('value', value);
+            $(option).html($(ths).html());
+
+            var target_sel = '#' + target_id;
+            $(target_sel).append(option);
+            $(ths).remove();
+        }
+
+
+        function MoveAllOpt(from_id, to_id) {
+            var fsel = '#' + from_id;
+            $(fsel).children(':visible').each(function () {
+
+                MoveOpt(this, to_id);
+            })
+        }
+
+        function MoveMutiOpt(from_id, to_id) {
+            $("select option:selected").each(function () {
+                //$("#id_teachers_unchecked option:selected")
+                var fsel = '#' + from_id + ' option:selected';
+                console.log(fsel, $(fsel));
+                $(fsel).each(function () {
+                    MoveOpt(this, to_id);
+                });
+            })
+        }
+
+        function FilterSearch(ths, target_id) {
+            // ths为 过滤input框的this
+            var target_sel = '#' + target_id;
+            var search_text = $(ths).val();
+            search_text = search_text.toUpperCase();
+            $(target_sel).children().each(function () {
+                if ($(this).text().toUpperCase().search(search_text) != -1) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            })
+        }
+
+
+        function SetOptSelected(sub_window) {
+            // 提交时,提交框(带有name属性)的option全部选中
+            $("select[name] option").prop('selected', true);
+        }
+    </script>
 {% endblock js %}
 

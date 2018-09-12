@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load order %}
+{% load filter %}
+{% load display %}
+{% block css %}
+    {{ block.super }}
+    <style>
+        .display {
+            list-style: disc;
+        }
+    </style>
+{% endblock css %}
+
+{% block body %}
+    <div class="breadcrumbs">
+        <a href="/myAdmin/">首页</a>
+        &rsaquo; <a href="/myAdmin/{{ app_name }}/">{{ app_name|capfirst }}</a>
+        &rsaquo; <a href="/myAdmin/{{ app_name }}/{{ cls_name }}">{{ cls_verbose_name }}</a>
+        &rsaquo; <a href="/myAdmin/{{ app_name }}/{{ cls_name }}/change/{{ model_obj.id }}/">{{ model_obj }}</a>
+        &rsaquo; 删除
+    </div>
+
+    <div class='page-header'>
+        <h3>删除 {{ model_obj }}</h3>
+    </div>
+
+
+
+    <h1>你确定吗？</h1>
+
+    <p>你确认想要删除 {{ cls_name }} {{ model_obj }}？ 下列所有相关的项目都将被删除：</p>
+
+    <h2>概览</h2>
+    <ul>
+        {% for k,config in num_config.items %}
+            <li>{{ config.cls_verbose_name }} :{{ config.count }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>对象</h2>
+    <div class="display">
+        {{ display_html |safe }}
+    </div>
+
+    {% block del_form %}
+        <form method="post">
+            {% csrf_token %}
+            <div>
+                <input type="hidden" name="post" value="yes"/>
+                <input type="submit" value="是的，我确定">
+                <a href="/myAdmin/{{ app_name }}/{{ cls_name }}/change/{{ model_obj.id }}"
+                   class="button cancel-link">不，返回</a>
+            </div>
+        </form>
+    {% endblock del_form %}
+
+{% endblock body %}
+
+
+{% block js %}
+    {{ block.super }}
+{% endblock js %}

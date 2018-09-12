@@ -1,0 +1,45 @@
+span.menu-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar-top-links > li > a {
+    display: table-cell;
+    padding: 0px 15px;
+    vertical-align: middle;
+    font-size: 16px;
+    height: 50px;
+    color: #515151;
+    transition: all .4s;
+}
+
+.username {
+    float: right;
+    white-space: nowrap;
+    line-height: 50px;
+    margin: 0 20px;
+}
+
+#mainnav-menu li {
+    width: 100%;
+}
+
+.menu-active {
+    color: white;
+}
+
+a.section {
+    font-weight: bold;
+}
+
+.table-vcenter td {
+    font-size: 15px;
+}
+
+.panel.panel-info.col-md-8 {
+    margin-left: 30px;
+}
+
+h1.page-header.text-overflow {
+    margin-left: 30px;
+}

@@ -1,0 +1,126 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block page-title-text %}
+    学员报名
+{% endblock %}
+{% block page-content %}
+
+    <div class="panel">
+        <div class="eq-height clearfix">
+            {#            <div class="col-md-5 eq-box-md text-center box-vmiddle-wrap bg-primary">#}
+            {##}
+            {#                <!-- Simple Promotion Widget -->#}
+            {#                <!--===================================================-->#}
+            {#                <div class="box-vmiddle pad-all">#}
+            {#                    <h3 class="text-thin">广告标题</h3>#}
+            {#                    <span class="icon-wrap icon-wrap-lg icon-circle bg-trans-light">#}
+            {#                        <i class="fa fa-gift fa-5x text-primary"></i>#}
+            {#                    </span>#}
+            {#                    <p><span class="text-lg text-bold">广告内容</span></p>#}
+            {#                    <a class="btn btn-lg btn-primary btn-labeled fa fa-arrow-right" href="#">详细活动信息...</a>#}
+            {#                </div>#}
+            {#                <!--===================================================-->#}
+            {##}
+            {#            </div>#}
+            <div class="col-md-7 eq-box-md eq-no-panel">
+
+                <!-- Main Form Wizard -->
+                <!--===================================================-->
+                <div id="demo-main-wz">
+
+                    <!--nav-->
+                    <ul class="row wz-step wz-icon-bw wz-nav-off mar-top wz-steps">
+                        <li class="col-xs-3 {% if response.step < 3 %}active{% endif %}">
+                            <a data-toggle="tab" href="#demo-main-tab1">
+                                <span class="icon-wrap icon-wrap-xs bg-danger"><i class="fa fa-info"></i></span>
+                                <p class="text-thin">选择班级</p>
+                            </a>
+                        </li>
+                        <li class="col-xs-3 {% if response.step < 4 %}active{% endif %}">
+                            <a data-toggle="tab" href="#demo-main-tab2">
+                                <span class="icon-wrap icon-wrap-xs bg-warning"><i class="fa fa-user"></i></span>
+                                <p class="text-thin">审核学员信息</p>
+                            </a>
+                        </li>
+                        <li class="col-xs-3 {% if response.step < 5 %}active{% endif %}">
+                            <a data-toggle="tab" href="#demo-main-tab3">
+                                <span class="icon-wrap icon-wrap-xs bg-info"><i class="fa fa-home"></i></span>
+                                <p class="text-thin">缴费</p>
+                            </a>
+                        </li>
+                        <li class="col-xs-3 {% if response.step > 4 %}active{% endif %}">
+                            <a data-toggle="tab" href="#demo-main-tab4">
+                                <span class="icon-wrap icon-wrap-xs bg-success"><i class="fa fa-heart"></i></span>
+                                <p class="text-thin">报名成功</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!--progress bar-->
+                    <div class="progress progress-xs">
+                        <div class="progress-bar progress-bar-primary"
+                             style="width: 25%; left: 0%; position: relative; transition: all 0.5s;"></div>
+                    </div>
+
+
+                    <!--form-->
+                    <form class="form-horizontal" method="post" novalidate>{% csrf_token %}
+                        <div class="panel-body">
+                            <div class="tab-content">
+                                <!--First tab-->
+                                <div id="step1-info" class="tab-pane active in">
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label">顾客</label>
+                                        <div class="col-lg-7">
+                                            <p class="info">{{ customer }} </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label">课程顾问</label>
+                                        <div class="col-lg-7">
+                                            <p class="info">{{ consultant }} </p>
+                                        </div>
+                                    </div>
+
+                                    {% for field in form %}
+                                        <div class="form-group">
+                                            <label class="col-lg-3 control-label">{{ field.label }}</label>
+                                            <div class="col-lg-7">
+                                                {{ field }}
+                                            </div>
+                                            <span>{{ field.errors.0 }}</span>
+                                        </div>
+                                    {% endfor %}
+
+                                    <div class="form-group">
+                                        <pre> 请将此报名链接发给学员进行填写 http://localhost:9000 </pre>
+{#                                        {% url 'customer_info' customer_id=customer %}#}
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!--Footer button-->
+                            <div class="pull-right pad-all">
+                                <button type="submit" class="btn btn-success ">下一步</button>
+                                {#                                <button type="button" class="btn btn-success ">#}
+                                {#                                    <a href="/king_admin/crm_customer/change/{{ customer_obj.id }}/">返回</a>#}
+                                {#                                </button>#}
+
+                            </div>
+
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block js %}
+    {{ block.super }}
+    <script src="{% static 'plugin/bootstrap-wizard/jquery.bootstrap.wizard.min.js' %}"></script>
+    <script src="{% static 'plugin/bootstrap-wizard/form-wizard.js' %}"></script>
+{% endblock %}

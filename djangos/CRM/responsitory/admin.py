@@ -6,14 +6,12 @@ class CourseInfoAdmin(admin.ModelAdmin):
     list_display = ['title', 'price', 'outline', 'cyc']
     list_filter = ['title', 'price', 'cyc', 'outline']
     search_fields = ['title', 'price', 'cyc']
-    readonly_fields = ['title']
 
 
 class ScoreInfoAdmin(admin.ModelAdmin):
     list_display = ['student', 'lecture', 'grade', 'student_status', 'note', 'date']
     list_filter = ['student', 'lecture', 'grade', 'student_status', 'note', 'date']
     search_fields = ['grade', 'student_status', 'note', 'date']
-    readonly_fields = ['student', 'lecture', 'grade']
     # filter_horizontal = ['student', 'lecture']  # manytomany
 
 
@@ -25,14 +23,20 @@ class CustomerInfoAdmin(admin.ModelAdmin):
     search_fields = ['time', 'source', 'contact', 'consultant', 'status', 'consult_content',
                      'introduce_customer']
 
-    readonly_fields = ['time', 'contact', 'consultant', 'status']
+
+    # 定制Action行为具体方法
+    def func(self, request, queryset):
+        print(self, request, queryset)
+        print(request.POST.getlist('_selected_action'))
+
+    func.short_description = "中文显示自定义Actions"
+    actions = [func, ]
 
 
 class ClsInfoAdmin(admin.ModelAdmin):
     list_display = ['title', 'course', 'school', 'semester', 'start_date', 'graduate_date', 'type']
     search_fields = ['title', 'course', 'school', 'semester', 'start_date', 'graduate_date', 'type']
     list_filter = ['title', 'course', 'school']
-    readonly_fields = ['title', 'course', 'school']
     filter_horizontal = ['teachers']
 
 

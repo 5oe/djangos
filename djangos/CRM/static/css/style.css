@@ -247,10 +247,6 @@ a.section:focus, a.section:hover {
 
 /* GLOBAL DEFAULTS */
 
-p, ol, ul, dl {
-    margin: .2em 0 .8em 0;
-}
-
 p {
     padding: 0;
     line-height: 140%;
@@ -298,15 +294,7 @@ h5 {
     letter-spacing: 1px;
 }
 
-ul li {
-    padding: 1px 0;
-}
-
-li ul {
-    margin-bottom: 0;
-}
-
-li, dt, dd {
+dt, dd {
     font-size: 13px;
     line-height: 20px;
 }
@@ -335,7 +323,6 @@ fieldset {
 blockquote {
     font-size: 11px;
     color: #777;
-    margin-left: 2px;
     padding-left: 10px;
     border-left: 5px solid #ddd;
 }
@@ -639,9 +626,10 @@ select {
     height: 30px;
 }
 
-select[multiple] {
-    min-height: 150px;
-}
+/*select[multiple] {*/
+/*min-height: 270px;*/
+/*font-size: 15px;*/
+/*}*/
 
 /* FORM BUTTONS */
 
@@ -702,10 +690,6 @@ input[type=button][disabled].default {
 
 .module blockquote {
     margin-left: 12px;
-}
-
-.module ul, .module ol {
-    margin-left: 1.5em;
 }
 
 .module h3 {
@@ -1076,7 +1060,7 @@ table thead th .text a {
     padding: 10px;
     font-size: 13px;
     border-bottom: 1px solid #eee;
-    vertical-align:middle;
+    vertical-align: middle;
 }
 
 .form-row img, .form-row input {
@@ -1092,7 +1076,6 @@ form .form-row p {
     padding-left: 0;
 }
 
-
 .field-label {
     display: block;
     padding: 4px 10px 0 0;
@@ -1100,4 +1083,58 @@ form .form-row p {
     width: 160px;
     word-wrap: break-word;
     line-height: 1;
+}
+
+.error {
+    color: red;
+    margin-left: 160px;
+    margin-top: 10px;
+}
+
+._checked, ._unchecked {
+    min-height: 270px;
+    font-size: 15px;
+    /*height: 555px;*/
+}
+
+.help {
+    margin-top: 10px;
+}
+
+.col-md-4.sel {
+    padding: 0px;
+}
+
+.sign-link {
+    text-align: center;
+    vertical-align: text-bottom;
+    width: 30px;
+    height: 30px;
+    margin: 15px;
+    border-radius: 20%;
+}
+
+.sign-container {
+    height: 304px;
+    position: absolute;
+}
+
+.sign {
+    position: absolute;
+    left: 15px;
+    top: 100px;
+}
+
+span#basic-addon1 {
+    padding: 9px;
+    border-radius: 3px;
+}
+
+.add_all, .remove_all {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.add_all a, .remove_all a {
+    font-size: 16px;
 }

@@ -42,6 +42,11 @@ def get_value(d, field):
     return d.get(field, '')
 
 
+@register.simple_tag
+def get_value(d, field):
+    return d.get(field, '')
+
+
 @register.filter
 def to_string(s):
     return str(s)

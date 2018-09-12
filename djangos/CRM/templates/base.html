@@ -21,7 +21,7 @@
 
 <body>
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-inverse navbar-fixed-top hidden-sm">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
@@ -70,9 +70,9 @@
     </div>
 </nav>
 
-<div class="content-container">
+<div class="content-container ">
     <div class="row">
-        <div class="col-md-2  sidebar">
+        <div class="col-md-2  sidebar hidden-sm">
             <ul class="nav nav-sidebar">
                 {% for role in request.user.userinfo_set.all.0.role.select_related %}
                     {% for menu in role.menu.select_related %}
@@ -87,12 +87,13 @@
 
         </div>
         <div class="col-md-10  main">
+
             {% block body %}{% endblock body %}
         </div>
     </div>
 </div>
 {% block js %}
-    <script src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'js/../static/plugin/jquery-1.12.4.min.js' %}"></script>
     <script src="{% static 'plugin/bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
 {% endblock js %}
 </body>

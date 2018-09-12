@@ -20,10 +20,11 @@
                             {% for d in cls_list %}
                                 <tr>
                                     <th scope="row"><a
-                                            href="/myAdmin/{{ app }}/{{ d.cls_real_name }}/">{{ d.cls_name }}</a></th>
+                                            href="/myAdmin/{{ app }}/{{ d.cls_real_name }}/">{{ d.cls_verbose_name }}</a>
+                                    </th>
                                     <td><a href="/myAdmin/{{ app }}/{{ d.cls_real_name }}/add/" class="addlink">增加</a>
                                     </td>
-                                    <td><a href="/myAdmin/{{ app }}/{{ d.cls_real_name }}/change/"
+                                    <td><a href="/myAdmin/{{ app }}/{{ d.cls_real_name }}/"
                                            class="changelink">修改</a></td>
                                 </tr>
                             {% endfor %}

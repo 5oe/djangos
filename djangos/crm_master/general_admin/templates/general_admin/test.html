@@ -1,0 +1,24 @@
+{% extends 'general_admin/base.html' %}
+{% block css %}
+    {{ block.super }}
+{% endblock css %}
+
+{% block body %}
+    <button onclick="PopUpWindow('/generalAdmin/sale/')">father</button>
+{% endblock body %}
+{% block js %}
+    {{ block.super }}
+    <script>
+        function test() {
+            alert(250);
+        }
+
+        function PopUpWindow(link) {
+            var h_wnd = window.open(link, 'newwindow', 'height=550, width=800, top=0, left=0, toolbar=no, ' +
+                'menubar=no, scrollbars=no, resizable=no, location=no, status=no');
+            h_wnd.window.focus();
+        }
+    </script>
+
+
+{% endblock js %}

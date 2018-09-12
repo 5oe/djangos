@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 {% load order %}
+{% load filter %}
+{% load display %}
 {% block css %}
     {{ block.super }}
 {% endblock css %}
@@ -10,63 +12,89 @@
         <div class="breadcrumbs">
             <a href="/myAdmin/">首页</a>
             &rsaquo; <a href="/myAdmin/{{ app_name }}/">{{ app_name|capfirst }}</a>
-            &rsaquo; 课程表
+            &rsaquo; <a href="/myAdmin/{{ app_name }}/{{ cls_name }}">{{ cls_verbose_name }}</a>
         </div>
 
         <h1>选择 {{ cls_name }} 来修改</h1>
 
+        {% if search_fields %}
+            <form method="get">
+                <div>
+                    <input type="text" size="40" name="q" value="{{ args.q }}" id="searchbar" autofocus="">
+                    <input type="submit" value="搜索">
+
+                    {% if data_list|length != data_total_num %}
+                        <span class="small quiet">{{ data_list | length }} 条结果。 (<a href="?">总共{{ data_total_num }}</a>)</span>{% endif %}
+                    <input type="hidden" name="order" value="{{ args.order }}">
+                    {% for k,v in args.filter.items %}
+                        <input type="hidden" name="{{ k }}" value="{{ v }}">
+                    {% endfor %}
+                </div>
+            </form>
+        {% endif %}
+
         <div id="content-main">
             <ul class="object-tools">
                 <li>
-                    <a href="/admin/{{ app_name }}/{{ cls_name }}/add/" class="addlink">
+                    <a href="/myAdmin/{{ app_name }}/{{ cls_name }}/add/" class="addlink">
                         增加 {{ cls_name }}
                     </a>
                 </li>
-
-
             </ul>
 
 
-            <form id="changelist-form" method="post" novalidate>
+            <form id="data-form" method="post" novalidate
+                  action="{% url "action_model_obj" app=app_name cls=cls_name %}">
                 {% csrf_token %}
                 <div class="actions">
                     <label>动作 <select name="action" required>
                         <option value="" selected>---------</option>
-                        <option value="delete_selected">删除所选的 {{ cls_verbose_name }}</option>
+                        {% for config in actions %}
+                            <option value="{{ config.value }}"> {{ config.display }} </option>
+                        {% endfor %}
                     </select></label><input type="hidden" name="select_across" value="0" class="select-across"/>
                     <button type="submit" class="button" title="运行选中的动作" name="index" value="0">执行</button>
-                    <span class="action-counter">{{ conf_dict.list_display.info.data_count }} 个中 <span>0</span>个被选</span>
+                    <span class="action-counter">{{ data_list|length }} 个中 <span id="checked-num">0</span>个被选</span>
                 </div>
 
                 <div class="module">
                     <table class="col-md-12">
                         <thead>
                         <tr>
-                            <th scope="col" class="check-all">
-                                <div class="text"><input type="checkbox" id="action-toggle"/></div>
+                            <th scope="col">
+                                <div class="text"><input type="checkbox" id="check-all"/></div>
                             </th>
-                            {% for row in conf_dict.list_display.info.fields %}
+                            {% for fields in show_fields %}
                                 <th scope="col" class="sortable column-title">
-                                    <div class="text"><a
-                                            href="?order={{ forloop.counter }}">{{ row.field_name }}</a></div>
+                                    <div class="text "><a
+                                            href="{% make_order_str forloop.counter args %}">{{ fields }}</a>
+
+                                        {% invert_order_href forloop.counter args %}
+                                        {% delete_order_href forloop.counter args %}
+                                    </div>
                                 </th>
                             {% endfor %}
                         </tr>
                         </thead>
                         <tbody>
 
-                        {% for row_list in conf_dict.list_display.info.data_list %}
+                        {% for config_dict in data_list %}
                             <tr>
-                                {% for row in row_list %}
+                                {% for field,value_dict in config_dict.items %}
                                     {% if forloop.counter0 == 0 %}
-                                        <td class="action-checkbox"><input type="checkbox" name="_selected_action"
-                                                                           value="{{ row }}"
-                                                                           class="action-select"/></td>
+                                        <td class="action-checkbox"><input
+                                                type="checkbox"
+                                                row-id="{{ config_dict | get_id }}"
+                                                value="{{ value_dict | display }}"
+                                                name="id"></td>
                                     {% elif forloop.counter0 == 1 %}
                                         <th class="field-title">
-                                            <a href="/admin/{{ app_name }}/{{ cls_name }}/change/">{{ row }}</a></th>
+                                            <a href="/myAdmin/{{ app_name }}/{{ cls_name }}/change/{{ config_dict | get_id }}">{{ value_dict | display }}</a>
+                                        </th>
                                     {% else %}
-                                        <td class="field-price">{{ row }}</td>
+                                        <td>
+                                            <div class="in">{{ value_dict | display }}</div>
+                                        </td>
                                     {% endif %}
                                 {% endfor %}
                             </tr>
@@ -76,7 +104,7 @@
                 </div>
 
                 <p class="paginator">
-                    {{ conf_dict.list_display.info.data_count }} {{ cls_verbose_name }}
+                    {{ data_list|length }} {{ cls_verbose_name }}
                 </p>
 
             </form>
@@ -84,31 +112,62 @@
     </div>
 
 
-    {% if conf_dict.list_filter.status %}
+    {% if list_filter %}
         <div class="module filtered col-md-2" id="changelist">
-
         <div id="changelist-filter">
             <h2>过滤器</h2>
-            {% for field,field_data in conf_dict.list_filter.info.items %}
-                <h3> 以 {{ field_data.field_name }}</h3>
+            {#            {{ list_filter }}#}
+            {% for config_dict in list_filter %}
+                <h3> 以 {{ config_dict.field_verbose_name }}</h3>
                 <ul>
                     <li class="selected">
-                        <a href="?{{ field_data.data_list.0 | get_single_key }}=全部">全部</a></li>
-                    {% for d in field_data.data_list %}
-                        {#                        {{ d }}#}
-                        {% for k,v in d.items %}
-                            <li><a href="?{{ k }}={{ v }}">{{ v }}</a></li>
-                        {% endfor %}
+                        <a href="{% create_filter_str config_dict.field args %}"
+                           {% if '' ==  args.filter|get_value:config_dict.field %}class="active"{% endif %}>全部</a></li>
+                    {% for value_dict in config_dict.data_list %}
+                        <li>
+                            <a href="{% create_filter_str config_dict.field args value_dict.value %}"
+                               {% if value_dict.value|to_string ==  args.filter|get_value:config_dict.field %}class="active"{% endif %}>{{ value_dict | display }}</a>
+                        </li>
                     {% endfor %}
                 </ul>
             {% endfor %}
         </div>
     {% endif %}
+    {#    {% test app_name 1 2 3 %}#}
 {% endblock body %}
 
 
 {% block js %}
     {{ block.super }}
-{% endblock js %}
+    <script>
+        $('#check-all').click(function () {
+            var status = $(this).prop('checked');
+            var total_num = $('input:checkbox[row-id]').length;
+            if (status) {
+                $('input:checkbox[row-id]').prop('checked', true);
+                $('#checked-num').text(total_num);
+            }
+            else {
+                $('input:checkbox[row-id]').prop('checked', false);
+                $('#checked-num').text(0);
+            }
 
+
+        })
+
+
+        $('#data-form').on('click', 'input:checkbox[row-id]', function () {
+            var total_num = $('input:checkbox[row-id]').length;
+            var checked_num = $('input:checkbox[row-id]').filter(':checked').length;
+            if (checked_num == total_num) {
+                $('#check-all').prop('checked', true);
+            }
+            else {
+                $('#check-all').prop('checked', false);
+            }
+
+            $('#checked-num').text(checked_num);
+        })
+    </script>
+{% endblock js %}
 

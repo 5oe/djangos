@@ -13,6 +13,25 @@ class ModelAdmin(object):
     list_filter = []
     search_fields = []
     readonly_fields = []
+    filter_horizontal = []
+
+    # 定制Action行为具体方法
+    def func(self, request, queryset):
+        print(self, request, queryset)
+        print(request.POST.getlist('id'), '@' * 100)
+
+    def del_action(self, request, queryset):
+        pass
+
+    del_action.short_description = "删除所选对象"
+    func.short_description = "中文显示自定义Actions"
+
+    # _actions = [func, del_obj]
+    actions = [func, ]
+
+    @property
+    def del_action_func_name(self):
+        return self.del_action.__name__
 
     def __init__(self):
         self.show_fields = []  # verbose
@@ -93,7 +112,6 @@ class ModelAdmin(object):
         for k in self.search_args:
             q_obj = Q(**{k: q})
             l.append(q_obj)
-
         ret = reduce(operator.or_, l)
         return ret
 
@@ -230,3 +248,16 @@ class ModelAdmin(object):
         ret['filter'] = filter_args
         # {'order': '1', 'q': 'fdfddsaf', 'filter_args': {'title': '111', 'price': '232121'}}
         return ret
+
+    def execute_action(self, func_name, request, query_set):
+        if not hasattr(self, func_name):
+            return
+
+        func = getattr(self, func_name)
+        return func(request, query_set)
+        #
+        # def get_actions(self):
+        #     if hasattr(self, 'actions'):
+        #         return self._actions + getattr(self, 'actions')
+        #     else:
+        #         return self._actions

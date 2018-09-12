@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% block css %}
+    {{ block.super }}
+{% endblock css %}
+
+{% block body %}
+    <div class="container">
+
+
+    <div class="panel panel-bordered panel-info pad-top">
+        <div class="panel-heading">
+            <h3 class="panel-title">订单详细信息</h3>
+        </div>
+        <form method="post">{% csrf_token %}
+
+            <div class="panel-body form-horizontal">
+                <p>学习是投资自己最好的方式！</p>
+                <div class="col-md-10">
+                    {% for field in detail_form %}
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">{{ field.label }}</label>
+                            <div class="col-md-9">
+
+                                {{ field }}
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                    {% for field in enrollment_form %}
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">{{ field.label }}</label>
+                            <div class="col-md-9">
+
+                                {{ field }}
+                            </div>
+                        </div>
+                    {% endfor %}
+
+
+                    <div class="form-group">
+                        <label class="col-md-3 control-label"></label>
+                        <div class="col-md-9">
+                            <pre style="height: 400px">{{ contract.content }}</pre>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">同意协议</label>
+                        <div class="col-md-9">
+                            <input type="checkbox" name="agree" value="1">
+                        </div>
+                    </div>
+                </div>
+                {#                    <div class="form-group col-lg-6">#}
+                {#                        <label class="col-md-3 control-label" for="demo-text-input">姓名</label>#}
+                {#                        <div class="col-md-9">#}
+                {#                            <p class="form-control-static">{{ enroll_obj.customer.qq }}</p>#}
+                {#                            <small class="help-block">This is a help text</small>#}
+                {#                        </div>#}
+                {#                    </div>#}
+
+
+            </div>
+            <div class="text-center" style="margin-bottom: 30px">
+                <button class="btn btn-success" type="submit">提交</button>
+            </div>
+        </form>
+
+        <p>已上传文件列表</p>
+        <ul id="uploaded_files">
+            {#                    {% for file in uploaded_files %}#}
+            {#                        <li>{{ file }}</li>#}
+            {#                    {% endfor %}#}
+            <li>love</li>
+            <li>fuck</li>
+        </ul>
+        <p>请上传身份证和户口本(本人正面)的图片文件</p>
+        <form id="myAwesomeDropzone" action="{% url 'enroll_upload' enrollment_id=enrollment.id %}" class="dropzone"
+              enctype="multipart/form-data">
+            <div class="fallback">
+                <input name="file" type="file" multiple/>
+            </div>
+        </form>
+    </div>
+
+
+{% endblock %}
+
+{% block js %}
+    {{ block.super }}
+
+    <script>
+        // "myAwesomeDropzone" is the camelized version of the HTML element's ID
+        Dropzone.options.myAwesomeDropzone = {
+            paramName: "file", // The name that will be used to transfer the file
+            maxFilesize: 2, // MB
+            maxFiles: 2,
+            parallelUploads: 1,
+            accept: function (file, done) {
+                if (file.name == "justinbieber.jpg") {
+                    done("Naha, you don't.");
+                }
+                else {
+                    done();
+                }
+            }
+        };
+
+        $(function () {
+            // Now that the DOM is fully loaded, create the dropzone, and setup the
+            // event listeners
+            // Prevent Dropzone from auto discovering this element:
+            Dropzone.options.myAwesomeDropzone = false;
+            var myDropzone = new Dropzone("#myAwesomeDropzone");
+            myDropzone.on("success", function (file, response) {
+                /* Maybe display some more file information on your page */
+                console.log("completet", file, response);
+                var response = JSON.parse(response);
+                if (!response.status) {
+                    alert(response.err_msg);
+                } else {
+                    $("#uploaded_files").append("<li>" + file.name + "</li>");
+
+                }
+
+            });
+        })
+        function BeforeFormSubmit(ele) {
+            $(":disabled").removeAttr("disabled");
+
+            if ($("#uploaded_files").children().length == 0) {
+                alert("请上传证件信息!")
+                return false
+            }
+
+            if (!$("input[name='contract_agreed']").prop("checked")) {
+                alert("必须勾选不退费协议!")
+                return false
+            }
+            //return false;
+        }
+    </script>
+{% endblock js %}

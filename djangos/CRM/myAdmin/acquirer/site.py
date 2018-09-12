@@ -27,7 +27,6 @@ class Site(object):
 
     def get_cls_list(self, app_name):
         admin_list = self.app_to_admin[app_name]
-        print(admin_list)
         l = [admin.cls_detail for admin in admin_list]
         return l
 

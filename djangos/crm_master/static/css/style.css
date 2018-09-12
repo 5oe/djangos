@@ -1,0 +1,53 @@
+p.pad-btm {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.input-group-addon.verify-code-container {
+    padding: 0;
+}
+
+.input-group-addon {
+    min-width: 66px;
+    font-size: 10px;
+}
+
+.btn-success {
+    margin: 5px 0 0 0;
+    font-size: 15px;
+    border-radius: 5%;
+}
+
+span.menu-title {
+    font-size: 16px;
+}
+
+.menu-active {
+    color: white;
+}
+
+#step1-info .form-group {
+    margin-bottom: 0;
+}
+
+label.col-lg-3.control-label {
+    font-size: 17px;
+    vertical-align: middle;
+    line-height: 8px;
+}
+
+#step1-info .info {
+    text-indent: 5px;
+    font-size: 19px;
+}
+
+#step1-info .form-control {
+    font-size: 18px;
+}
+
+.form-horizontal .form-group {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+

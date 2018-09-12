@@ -1,0 +1,59 @@
+{% extends 'general_admin/base.html' %}
+{% load static %}
+{% block css %}
+    {{ block.super }}
+{% endblock css %}
+{% block body %}
+    <!-- Content -->
+    <div class="content col-md-10">
+    <a href="/generalAdmin/"><h1 class="title">站点管理</h1></a>
+    <div class="row col-md-push-1">
+        <div id="content" class="   app-list">
+            {% for app,cls_list in info.items %}
+                <div id="content-main">
+                    <div class="module">
+                        <table>
+                            <caption>
+                                <a href="/generalAdmin/{{ app }}/" class="section">{{ app }}</a>
+                            </caption>
+                            {% for d in cls_list %}
+                                <tr>
+                                    <th scope="row"><a
+                                            href="/generalAdmin/{{ app }}/{{ d.cls_real_name }}/">{{ d.cls_verbose_name }}</a>
+                                    </th>
+                                    <td><a href="/generalAdmin/{{ app }}/{{ d.cls_real_name }}/add/"
+                                           class="addlink">增加</a>
+                                    </td>
+                                    <td><a href="/generalAdmin/{{ app }}/{{ d.cls_real_name }}/"
+                                           class="changelink">修改</a></td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        {#        <div id="content-relate" class="col-md-3">#}
+        {#            <div class="module" id="recent-actions-module">#}
+        {#                <h2>最近动作</h2>#}
+        {#                <h3>我的动作</h3>#}
+        {##}
+        {##}
+        {#                <ul class="actionlist">#}
+        {#                    <li class="addlink">#}
+        {#                        <a href="/admin/responsitory/userinfo/14/change/">yi1</a>#}
+        {#                        <br/>#}
+        {#                        <span class="mini quiet">User info</span>#}
+        {#                    </li>#}
+        {#                </ul>#}
+        {#            </div>#}
+        {#        </div>#}
+        {#    </div>#}
+        <!-- END Content -->
+    </div>
+
+{% endblock body %}
+
+{% block js %}
+    {{ block.super }}
+{% endblock js %}

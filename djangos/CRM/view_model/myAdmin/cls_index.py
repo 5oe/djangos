@@ -3,12 +3,12 @@ from myAdmin.acquirer.lib import get_single_key
 
 
 class ClsIndexViewModel(object):
-    def __init__(self, request, model_admin: ModelAdmin):
-        self.model_admin = model_admin
-        self.model_admin.handle_setting(request)
-        self.query_set = model_admin.query_set
+    def __init__(self, request, admin: ModelAdmin):
+        self.admin = admin
+        self.admin.handle_setting(request)
+        self.query_set = admin.query_set
         self.data_container = []
-        if self.model_admin.default_handle_flag:
+        if self.admin.default_handle_flag:
             self.init_default_display()
         else:
             self.init_required_display()
@@ -19,7 +19,7 @@ class ClsIndexViewModel(object):
 
     def init_required_display(self):
         # add_display_arg(query_set, has_choice_fields, real_list_display, data_container):
-        has_choice_fields = self.model_admin.get_display_choice_fields()
+        has_choice_fields = self.admin.get_display_choice_fields()
         self.process_list_display_config(has_choice_fields)
 
     @staticmethod
@@ -41,7 +41,7 @@ class ClsIndexViewModel(object):
         # single_data初始状态:{'status':1,'sex':女}
         # 处理后 {'status':{'value':1,'display':'未选中'},'sex':{'data':'女'}}
         for obj in self.query_set:
-            single_data = self.process_single_values(obj, self.model_admin.real_list_display)
+            single_data = self.process_single_values(obj, self.admin.real_list_display)
             for field in has_choice_fields:
                 func_name = self.get_replace_func_name(field)
                 func = getattr(obj, func_name)
@@ -59,7 +59,7 @@ class ClsIndexViewModel(object):
            data_list':[{'value':1,'display':'男'},{'value':2,'display':'女'}]},
        ]
         """
-        config_list = self.model_admin.list_filter_config
+        config_list = self.admin.list_filter_config
         li = []
         if not config_list:
             return li
@@ -68,7 +68,7 @@ class ClsIndexViewModel(object):
             new_config = {}
             field = get_single_key(config)
             new_config['field'] = field
-            new_config['field_verbose_name'] = self.model_admin.get_field_verbose_name(field)
+            new_config['field_verbose_name'] = self.admin.get_field_verbose_name(field)
             data_list = config[field]
             new_config['data_list'] = self.process_list_filter_data(field, data_list)
             li.append(new_config)
@@ -80,12 +80,11 @@ class ClsIndexViewModel(object):
         :param field: 'price' 
         :return:{'value':1,'display':'男'}
         """
-        choices = self.model_admin.get_field_choices(field)
-        related_model = self.model_admin.get_field_related_model(field)
+        choices = self.admin.get_field_choices(field)
+        related_model = self.admin.get_field_related_model(field)
         if choices:
             # 带choices参数字段
-            choices_dict = self.model_admin.get_choices_dict(choices)
-            return self.process_choices_field_data(field, data_list, choices_dict)
+            return self.process_choices_field_data(field, data_list, choices)
         elif related_model:
             # 外键字段
             return self.process_foreign_field_data(field, data_list, related_model)
@@ -105,8 +104,8 @@ class ClsIndexViewModel(object):
             li.append(d)
         return li
 
-    @staticmethod
-    def process_choices_field_data(field, data_list, choices_dict):
+    def process_choices_field_data(self, field, data_list, choices):
+        choices_dict = self.admin.get_choices_dict(choices)
         li = []
         for row in data_list:
             data = row[field]
@@ -122,15 +121,34 @@ class ClsIndexViewModel(object):
             li.append({'value': data})
         return li
 
+    def process_actions(self):
+        '''
+        处理 actions
+        :return:
+          [{'display': '中文显示自定义Actions', 'value': 'func'}, ]
+        '''
+
+        li = []
+        actions = self.admin.actions
+        for func in actions:
+            config = {'display': func.__name__, 'value': func.__name__}
+            if hasattr(func, 'short_description'):
+                config['display'] = func.short_description
+            li.append(config)
+
+        li.append({'display': self.admin.del_action.short_description, 'value': self.admin.del_action.__name__})
+        return li
+
     def get_context(self, request, **kwargs):
         context = {
-            'show_fields': self.model_admin.show_fields,
+            'show_fields': self.admin.show_fields,
             'data_list': self.data_container,
             'list_filter': self.process_list_filter_config(),
-            'search_fields': self.model_admin.search_fields,
-            'data_total_num': self.model_admin.obj_total_num,
-            'args': self.model_admin.get_kwargs(request)
+            'search_fields': self.admin.search_fields,
+            'data_total_num': self.admin.obj_total_num,
+            'args': self.admin.get_kwargs(request),
+            'actions': self.process_actions(),
         }
-        context.update(self.model_admin.cls_detail)
+        context.update(self.admin.cls_detail)
         context.update(kwargs)
         return context
