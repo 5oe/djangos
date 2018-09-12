@@ -19,16 +19,26 @@
     <SUITE FILE_PATH="coverage/CRM$DateTimeFIeld.coverage" NAME="DateTimeFIeld Coverage Results" MODIFIED="1535097617063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataCreator/module/data_source" />
     <SUITE FILE_PATH="coverage/CRM$myAdmin.coverage" NAME="myAdmin Coverage Results" MODIFIED="1534601247004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/myAdmin/acquirer" />
     <SUITE FILE_PATH="coverage/CRM$password.coverage" NAME="password Coverage Results" MODIFIED="1535116164866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataCreator/module/source" />
+<<<<<<< Updated upstream
     <SUITE FILE_PATH="coverage/CRM$modelAdmin.coverage" NAME="modelAdmin Coverage Results" MODIFIED="1535206120492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/myAdmin/acquirer" />
+=======
+>>>>>>> Stashed changes
     <SUITE FILE_PATH="coverage/CRM$ImageField.coverage" NAME="ImageField Coverage Results" MODIFIED="1535095980985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataCreator/module/data_source" />
     <SUITE FILE_PATH="coverage/CRM$name.coverage" NAME="name Coverage Results" MODIFIED="1535096041399" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataCreator/module/data_source" />
     <SUITE FILE_PATH="coverage/CRM$DateField.coverage" NAME="DateField Coverage Results" MODIFIED="1535097261324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataCreator/module/data_source" />
     <SUITE FILE_PATH="coverage/CRM$Test__templates_myAdmin_cls_index_html.coverage" NAME="Test: templates.myAdmin.cls_index.html Coverage Results" MODIFIED="1534685956355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+<<<<<<< Updated upstream
     <SUITE FILE_PATH="coverage/CRM$model_del.coverage" NAME="model_del Coverage Results" MODIFIED="1535545587731" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/view_model/myAdmin" />
     <SUITE FILE_PATH="coverage/CRM$app.coverage" NAME="app Coverage Results" MODIFIED="1534600933649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/myAdmin/acquirer" />
     <SUITE FILE_PATH="coverage/CRM$CharField.coverage" NAME="CharField Coverage Results" MODIFIED="1535091753859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataCreator/module/data_source" />
     <SUITE FILE_PATH="coverage/CRM$FloatField.coverage" NAME="FloatField Coverage Results" MODIFIED="1535091835623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataCreator/module/data_source" />
     <SUITE FILE_PATH="coverage/CRM$format.coverage" NAME="format Coverage Results" MODIFIED="1535384535257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/libs" />
+=======
+    <SUITE FILE_PATH="coverage/CRM$app.coverage" NAME="app Coverage Results" MODIFIED="1534600933649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/myAdmin/acquirer" />
+    <SUITE FILE_PATH="coverage/CRM$CharField.coverage" NAME="CharField Coverage Results" MODIFIED="1535091753859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataCreator/module/data_source" />
+    <SUITE FILE_PATH="coverage/CRM$FloatField.coverage" NAME="FloatField Coverage Results" MODIFIED="1535091835623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataCreator/module/data_source" />
+    <SUITE FILE_PATH="coverage/CRM$format.coverage" NAME="format Coverage Results" MODIFIED="1535098114474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataCreator/libs" />
+>>>>>>> Stashed changes
     <SUITE FILE_PATH="coverage/CRM$FileField.coverage" NAME="FileField Coverage Results" MODIFIED="1535095521199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DataCreator/module/data_source" />
   </component>
   <component name="DatabaseView">
@@ -73,20 +83,117 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myAdmin/views.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="88">
               <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
+=======
+            <state relative-caret-position="-1">
+              <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+              <folding>
+                <marker date="1535182679958" expanded="true" signature="1406:1415" ph="..." />
+                <marker date="1535182679958" expanded="true" signature="1436:1445" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="modelAdmin.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/myAdmin/acquirer/modelAdmin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="387">
+              <caret line="71" column="28" lean-forward="false" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cls_index.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view_model/myAdmin/cls_index.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lib.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myAdmin/acquirer/lib.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cls_index2.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/myAdmin/cls_index2.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="22" column="49" lean-forward="false" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+              <folding>
+                <marker date="1535182679972" expanded="true" signature="5250:5428" ph="..." />
+                <marker date="1535182679972" expanded="true" signature="5250:5462" ph="{% for value in data_dict.data_list ... %}" />
+                <marker date="1535182679972" expanded="true" signature="5250:5483" ph="..." />
+                <marker date="1535182679972" expanded="true" signature="5250:5509" ph="{% for data_dict in list_filter ... %}" />
+                <marker date="1535182679972" expanded="true" signature="5250:5523" ph="..." />
+                <marker date="1535182679972" expanded="true" signature="5250:5656" ph="..." />
+                <marker date="1535182679972" expanded="true" signature="5260:5398" ph="..." />
+                <marker date="1535182679972" expanded="true" signature="5292:5383" ph="{% if value|to_string ==  args.filter|get_value:data_dict.field ... %}" />
+                <marker date="1535182679972" expanded="true" signature="5547:5576" ph="    {% test app_name 1 2 3 ... %}" />
+                <marker date="1535182679972" expanded="true" signature="5601:5655" ph="{% block js ... %}" />
+>>>>>>> Stashed changes
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< Updated upstream
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CRM/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1408">
               <caret line="64" column="60" lean-forward="false" selection-start-line="64" selection-start-column="60" selection-end-line="64" selection-end-column="60" />
+=======
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/responsitory/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2222">
+              <caret line="130" column="56" lean-forward="false" selection-start-line="130" selection-start-column="56" selection-end-line="130" selection-end-column="56" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+                <marker date="1535182679959" expanded="true" signature="3995:4913" ph="..." />
+                <marker date="1535182679959" expanded="true" signature="4017:4196" ph="..." />
+                <marker date="1535182679959" expanded="true" signature="4753:4820" ph="..." />
+                <marker date="1535182679959" expanded="true" signature="4844:4913" ph="..." />
+                <marker date="1535182679959" expanded="true" signature="4944:5798" ph="..." />
+                <marker date="1535182679959" expanded="true" signature="5563:5695" ph="..." />
+                <marker date="1535182679959" expanded="true" signature="5719:5798" ph="..." />
+                <marker date="1535182679959" expanded="true" signature="5833:6363" ph="..." />
+                <marker date="1535182679959" expanded="true" signature="6242:6313" ph="..." />
+                <marker date="1535182679959" expanded="true" signature="6337:6363" ph="..." />
+                <marker date="1535182679959" expanded="true" signature="6397:6664" ph="..." />
+                <marker date="1535182679959" expanded="true" signature="6546:6614" ph="..." />
+                <marker date="1535182679959" expanded="true" signature="6638:6664" ph="..." />
+                <marker date="1535182679959" expanded="true" signature="6696:7104" ph="..." />
+                <marker date="1535182679959" expanded="true" signature="6988:7054" ph="..." />
+                <marker date="1535182679959" expanded="true" signature="7078:7104" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lib.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myAdmin/templatetags/lib.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> Stashed changes
               <folding />
             </state>
           </provider>
@@ -301,6 +408,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< Updated upstream
+=======
+      <pane id="Scratches" />
+      <pane id="Scope" />
+>>>>>>> Stashed changes
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -323,6 +435,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< Updated upstream
               <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -341,14 +454,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+=======
+              <option name="myItemId" value="view_model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+>>>>>>> Stashed changes
               <option name="myItemId" value="myAdmin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+<<<<<<< Updated upstream
       <pane id="Scratches" />
       <pane id="Scope" />
+=======
+>>>>>>> Stashed changes
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -730,10 +852,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< Updated upstream
     <frame x="0" y="23" width="1440" height="794" extended-state="0" />
+=======
+    <frame x="0" y="23" width="1440" height="794" extended-state="6" />
+    <editor active="true" />
+>>>>>>> Stashed changes
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16309012" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+<<<<<<< Updated upstream
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840237" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15808298" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840237" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -742,16 +870,45 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39792898" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14592275" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15808298" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840237" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3988604" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+>>>>>>> Stashed changes
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+<<<<<<< Updated upstream
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840237" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988167" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1416309" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15808298" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3988604" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+>>>>>>> Stashed changes
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -809,8 +966,13 @@
     <entry file="file://$PROJECT_DIR$/myAdmin/acquirer/__init__.py" />
     <entry file="file://$PROJECT_DIR$/myAdmin/acquirer/site.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="1430">
           <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+=======
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -823,8 +985,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="22">
           <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+=======
+        <state relative-caret-position="66">
+          <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -852,8 +1019,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/format.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="110">
           <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+=======
+        <state relative-caret-position="0">
+          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -866,15 +1038,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/myAdmin/index.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="-86">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state relative-caret-position="88">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view_model/myAdmin/model_obj.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
+<<<<<<< Updated upstream
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+=======
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -887,15 +1070,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/myAdmin/admin.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state relative-caret-position="443">
+          <caret line="1017" column="15" lean-forward="true" selection-start-line="1017" selection-start-column="15" selection-end-line="1017" selection-end-column="15" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/myAdmin/view_libs.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="330">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+=======
+        <state relative-caret-position="135">
+          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="22" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -908,13 +1101,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/myAdmin/acquirer/modelAdmin.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="419">
           <caret line="32" column="28" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="28" />
+=======
+        <state relative-caret-position="-1">
+          <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+          <folding>
+            <marker date="1535182679958" expanded="true" signature="1406:1415" ph="..." />
+            <marker date="1535182679958" expanded="true" signature="1436:1445" ph="..." />
+          </folding>
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view_model/myAdmin/model_del.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="61">
           <caret line="112" column="8" lean-forward="false" selection-start-line="112" selection-start-column="8" selection-end-line="112" selection-end-column="8" />
         </state>
@@ -924,13 +1127,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="45" column="28" lean-forward="false" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+=======
+        <state relative-caret-position="484">
+          <caret line="22" column="49" lean-forward="false" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+          <folding>
+            <marker date="1535182679972" expanded="true" signature="5250:5428" ph="..." />
+            <marker date="1535182679972" expanded="true" signature="5250:5462" ph="{% for value in data_dict.data_list ... %}" />
+            <marker date="1535182679972" expanded="true" signature="5250:5483" ph="..." />
+            <marker date="1535182679972" expanded="true" signature="5250:5509" ph="{% for data_dict in list_filter ... %}" />
+            <marker date="1535182679972" expanded="true" signature="5250:5523" ph="..." />
+            <marker date="1535182679972" expanded="true" signature="5250:5656" ph="..." />
+            <marker date="1535182679972" expanded="true" signature="5260:5398" ph="..." />
+            <marker date="1535182679972" expanded="true" signature="5292:5383" ph="{% if value|to_string ==  args.filter|get_value:data_dict.field ... %}" />
+            <marker date="1535182679972" expanded="true" signature="5547:5576" ph="    {% test app_name 1 2 3 ... %}" />
+            <marker date="1535182679972" expanded="true" signature="5601:5655" ph="{% block js ... %}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/2414f537/1aa712ed-ca08-42e9-8627-8c06d68418d9/django_CRM.RoleInfo_menu">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/myAdmin/test.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="506">
           <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+=======
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -943,6 +1179,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/myAdmin/templatetags/lib.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="440">
           <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
         </state>
@@ -959,18 +1196,83 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="29" column="18" lean-forward="false" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+=======
+        <state relative-caret-position="374">
+          <caret line="18" column="30" lean-forward="false" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/2414f537/1aa712ed-ca08-42e9-8627-8c06d68418d9/django_CRM.RoleInfo">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/2414f537/1aa712ed-ca08-42e9-8627-8c06d68418d9/django_CRM.ScoreInfo">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/2414f537/1aa712ed-ca08-42e9-8627-8c06d68418d9/django_CRM.StudentInfo">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/myAdmin/cls_index.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="197">
           <caret line="86" column="76" lean-forward="false" selection-start-line="86" selection-start-column="76" selection-end-line="86" selection-end-column="76" />
+=======
+        <state relative-caret-position="2222">
+          <caret line="130" column="56" lean-forward="false" selection-start-line="130" selection-start-column="56" selection-end-line="130" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1535182679959" expanded="true" signature="3995:4913" ph="..." />
+            <marker date="1535182679959" expanded="true" signature="4017:4196" ph="..." />
+            <marker date="1535182679959" expanded="true" signature="4753:4820" ph="..." />
+            <marker date="1535182679959" expanded="true" signature="4844:4913" ph="..." />
+            <marker date="1535182679959" expanded="true" signature="4944:5798" ph="..." />
+            <marker date="1535182679959" expanded="true" signature="5563:5695" ph="..." />
+            <marker date="1535182679959" expanded="true" signature="5719:5798" ph="..." />
+            <marker date="1535182679959" expanded="true" signature="5833:6363" ph="..." />
+            <marker date="1535182679959" expanded="true" signature="6242:6313" ph="..." />
+            <marker date="1535182679959" expanded="true" signature="6337:6363" ph="..." />
+            <marker date="1535182679959" expanded="true" signature="6397:6664" ph="..." />
+            <marker date="1535182679959" expanded="true" signature="6546:6614" ph="..." />
+            <marker date="1535182679959" expanded="true" signature="6638:6664" ph="..." />
+            <marker date="1535182679959" expanded="true" signature="6696:7104" ph="..." />
+            <marker date="1535182679959" expanded="true" signature="6988:7054" ph="..." />
+            <marker date="1535182679959" expanded="true" signature="7078:7104" ph="..." />
+          </folding>
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/father.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="44">
           <caret line="2" column="42" lean-forward="false" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
         </state>
@@ -980,6 +1282,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state relative-caret-position="22">
+          <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/2414f537/1aa712ed-ca08-42e9-8627-8c06d68418d9/django_CRM.BlogInfo">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -992,8 +1311,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/plugin/bootstrap-select/LICENSE.txt">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state relative-caret-position="809">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -1006,13 +1330,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/sub.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="286">
           <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+=======
+        <state relative-caret-position="66">
+          <caret line="3" column="15" lean-forward="false" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/myAdmin/model-del-collection.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="242">
           <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
         </state>
@@ -1020,10 +1350,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/responsitory/apps.py">
       <provider selected="true" editor-type-id="text-editor">
+=======
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/2414f537/1aa712ed-ca08-42e9-8627-8c06d68418d9/CRM.auth_permission">
+      <provider editor-type-id="text-editor">
+>>>>>>> Stashed changes
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+<<<<<<< Updated upstream
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -1034,10 +1374,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/myAdmin/backend.html">
       <provider selected="true" editor-type-id="text-editor">
+=======
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/2414f537/1aa712ed-ca08-42e9-8627-8c06d68418d9/CRM.auth_group_permissions">
+      <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/2414f537/1aa712ed-ca08-42e9-8627-8c06d68418d9/CRM.auth_group">
+      <provider editor-type-id="text-editor">
+>>>>>>> Stashed changes
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+<<<<<<< Updated upstream
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/myAdmin/model-obj.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -1147,30 +1510,204 @@
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
+=======
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/2414f537/1aa712ed-ca08-42e9-8627-8c06d68418d9/CRM.ArticleInfo">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/2414f537/1aa712ed-ca08-42e9-8627-8c06d68418d9/CRM.BlogInfo">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/2414f537/1aa712ed-ca08-42e9-8627-8c06d68418d9/CRM.ClsInfo">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/2414f537/1aa712ed-ca08-42e9-8627-8c06d68418d9/CRM.ClsInfo_teachers">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/2414f537/1aa712ed-ca08-42e9-8627-8c06d68418d9/CRM.RoleInfo_menu">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/2414f537/1aa712ed-ca08-42e9-8627-8c06d68418d9/CRM.RoleInfo">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataProducter/main.py" />
+    <entry file="dbDummy://dbtable:/2414f537/1aa712ed-ca08-42e9-8627-8c06d68418d9/CRM.TestAdminInfo">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/2414f537/1aa712ed-ca08-42e9-8627-8c06d68418d9/CRM.auth_user_groups">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/2414f537/1aa712ed-ca08-42e9-8627-8c06d68418d9/CRM.QuestionInfo">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/2414f537/1aa712ed-ca08-42e9-8627-8c06d68418d9/CRM.UserInfo_role">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/2414f537/1aa712ed-ca08-42e9-8627-8c06d68418d9/CRM.UserInfo">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/2414f537/1aa712ed-ca08-42e9-8627-8c06d68418d9/CRM.auth_user">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/form/myAdmin/model_obj.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="436">
           <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+=======
+        <state relative-caret-position="528">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="2458">
           <caret line="243" column="0" lean-forward="false" selection-start-line="243" selection-start-column="0" selection-end-line="244" selection-end-column="0" />
           <folding />
+=======
+        <state relative-caret-position="110">
+          <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/form/myAdmin/cls_index.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="330">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
+=======
+        <state relative-caret-position="242">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myAdmin/acquirer/modelAdmin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="71" column="28" lean-forward="false" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+>>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
