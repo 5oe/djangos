@@ -113,7 +113,3 @@ class MenuInfo(models.Model):
     def __str__(self):
         return self.title
 
-
-class GroupInfo(Group):
-    class Meta:
-        verbose_name_plural = '权限组'

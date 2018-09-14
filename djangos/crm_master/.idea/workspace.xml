@@ -89,7 +89,7 @@
         <entry file="file://$PROJECT_DIR$/general_admin/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1453">
-              <caret line="146" column="0" lean-forward="true" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+              <caret line="146" column="0" lean-forward="false" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
               </folding>
@@ -100,8 +100,8 @@
       <file leaf-file-name="user.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/repository/models/user.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="86" selection-end-column="39" />
+            <state relative-caret-position="488">
+              <caret line="115" column="0" lean-forward="true" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
               <folding>
                 <element signature="e#0#90#0" expanded="true" />
               </folding>
@@ -113,7 +113,7 @@
         <entry file="file://$PROJECT_DIR$/utils/permissions/hook.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="220">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <caret line="10" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -211,7 +211,6 @@
         <option value="$PROJECT_DIR$/crm_master/settings.py" />
         <option value="$PROJECT_DIR$/account/urls.py" />
         <option value="$PROJECT_DIR$/general_admin/views.py" />
-        <option value="$PROJECT_DIR$/repository/models/user.py" />
         <option value="$PROJECT_DIR$/repository/admin.py" />
         <option value="$PROJECT_DIR$/repository/myAdmin.py" />
         <option value="$PROJECT_DIR$/utils/permissions/hook.py" />
@@ -219,6 +218,7 @@
         <option value="$PROJECT_DIR$/utils/permissions/decoraion.py" />
         <option value="$PROJECT_DIR$/utils/permissions/items.py" />
         <option value="$PROJECT_DIR$/utils/permissions/decorator.py" />
+        <option value="$PROJECT_DIR$/repository/models/user.py" />
       </list>
     </option>
   </component>
@@ -1058,7 +1058,7 @@
         <state relative-caret-position="286">
           <caret line="13" column="26" lean-forward="false" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
           <folding>
-            <marker date="1536306395714" expanded="true" signature="539:817" ph="..." />
+            <marker date="1536765805789" expanded="true" signature="539:817" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1122,7 +1122,7 @@
         <state relative-caret-position="395">
           <caret line="132" column="24" lean-forward="true" selection-start-line="132" selection-start-column="24" selection-end-line="132" selection-end-column="24" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1212,7 +1212,7 @@
     <entry file="file://$PROJECT_DIR$/utils/permissions/hook.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <caret line="10" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1238,7 +1238,7 @@
     <entry file="file://$PROJECT_DIR$/general_admin/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1453">
-          <caret line="146" column="0" lean-forward="true" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+          <caret line="146" column="0" lean-forward="false" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
           </folding>
@@ -1247,8 +1247,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/repository/models/user.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="86" selection-end-column="39" />
+        <state relative-caret-position="488">
+          <caret line="115" column="0" lean-forward="true" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
           <folding>
             <element signature="e#0#90#0" expanded="true" />
           </folding>
